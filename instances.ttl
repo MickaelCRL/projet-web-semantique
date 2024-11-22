@@ -2,6 +2,35 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+
+cerammi:Brazil a cerammi:Pays .
+cerammi:Canada a cerammi:Pays .
+cerammi:China a cerammi:Pays .
+cerammi:Ethiopia a cerammi:Pays .
+cerammi:France a cerammi:Pays .
+cerammi:Georgia a cerammi:Pays .
+cerammi:Germany a cerammi:Pays .
+cerammi:Hungary a cerammi:Pays .
+cerammi:Iceland a cerammi:Pays .
+cerammi:India a cerammi:Pays .
+cerammi:Iran a cerammi:Pays .
+cerammi:Israel a cerammi:Pays .
+cerammi:Norway a cerammi:Pays .
+cerammi:Portugal a cerammi:Pays .
+cerammi:Russian_Federation a cerammi:Pays .
+cerammi:South_Africa a cerammi:Pays .
+cerammi:Spain a cerammi:Pays .
+cerammi:Sweden a cerammi:Pays .
+cerammi:United_Kingdom_of_Great_Britain_and_Northern_Ireland a cerammi:Pays .
+cerammi:United_States_of_America a cerammi:Pays .
+cerammi:Zimbabwe a cerammi:Pays .
+cerammi:Austria a cerammi:Pays .
+cerammi:Italy a cerammi:Pays .
+cerammi:Slovenia a cerammi:Pays .
+cerammi:Switzerland a cerammi:Pays .
+cerammi:Australia a cerammi:Pays .
+
+
 cerammi:Historic_Centre_of_Salvador_de_Bahia a cerammi:Site ;
     cerammi:nom "Historic Centre of Salvador de Bahia" ;
     cerammi:annéeInscription "1985"^^xsd:gYear ;
@@ -173,9 +202,15 @@ cerammi:Great_Zimbabwe_National_Monument a cerammi:Site ;
 cerammi:Prehistoric_Pile_Dwellings_around_the_Alps a cerammi:Site ;
     cerammi:nom "Prehistoric Pile Dwellings around the Alps" ;
     cerammi:annéeInscription "2011"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Austria, cerammi:France, cerammi:Germany, cerammi:Italy, cerammi:Slovenia, cerammi:Switzerland ;
+    cerammi:appartientAuPays cerammi:Austria ;
+    cerammi:appartientAuPays cerammi:France ;
+    cerammi:appartientAuPays cerammi:Germany ;
+    cerammi:appartientAuPays cerammi:Italy ;
+    cerammi:appartientAuPays cerammi:Slovenia ;
+    cerammi:appartientAuPays cerammi:Switzerland ;
     cerammi:typeDeSite cerammi:Cultural ;
     cerammi:location "47.2783333333, 8.2075"^^geo:wktLiteral .
+
 
 cerammi:Ningaloo_Coast a cerammi:Site ;
     cerammi:nom "Ningaloo Coast" ;
