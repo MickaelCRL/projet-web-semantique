@@ -1,0 +1,23 @@
+@prefix cerammi: <https://cours.iut-orsay.fr/npbd/projet/cerammi> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix wd: <http://www.wikidata.org/entity/>
+@prefix wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT ?pays (COUNT(?site) AS ?nombreSites) ?population 
+       (?nombreSites / ?population AS ?sitesParHabitant)
+WHERE {
+  # Récupération des sites et pays depuis votre graphe local
+  ?site rdf:type cerammi:Site ;
+        cerammi:appartientAuPays ?pays .
+
+  # Liaison avec Wikidata pour la population
+  SERVICE <https://query.wikidata.org/sparql> {
+    ?pays wdt:P1082 ?population .
+  }
+}
+GROUP BY ?pays ?population
+ORDER BY DESC(?sitesParHabitant)
