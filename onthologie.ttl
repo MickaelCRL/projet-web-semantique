@@ -3,3 +3,57 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Classes
+# a = rdf:type
+
+cerammi:Champion a owl:Class ;
+    rdfs:label "Champion" ;
+   
+
+cerammi:Pays a owl:Class ;
+    rdfs:label "Pays" ;
+    rdfs:comment "Représente un pays d'origine." .
+
+cerammi:CatégorieDePoids a owl:Class ;
+    rdfs:label "Catégorie de Poids" ;
+
+
+# Propriétés de données
+cerammi:nom a owl:DatatypeProperty ;
+    rdfs:domain :Champion ;
+    rdfs:range xsd:string ;
+    rdfs:label "Nom" ;
+   
+
+cerammi:duréeCommeChampion a owl:DatatypeProperty ;
+    rdfs:domain :Champion ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Durée Comme Champion" ;
+   
+
+# Propriétés d'objets
+cerammi:aPourPaysOrigine a owl:ObjectProperty ;
+    rdfs:domain :Champion ;
+    rdfs:range :Pays ;
+    rdfs:label "A pour Pays Origine" ;
+    
+
+cerammi:compétitionDansCatégorie a owl:ObjectProperty ;
+    rdfs:domain :Champion ;
+    rdfs:range :CatégorieDePoids ;
+    rdfs:label "Compétition dans Catégorie" ;
+    
+
+# Instances (Exemple)
+cerammi:JonJones a :Champion ;
+    :nom "Jon Jones" ;
+    :aPourPaysOrigine :USA ;
+    :compétitionDansCatégorie :LightHeavyweight ;
+    :duréeCommeChampion 2454 .
+
+cerammi:USA a :Pays ;
+    rdfs:label "États-Unis" .
+
+cerammi:LightHeavyweight a :CatégorieDePoids ;
+    rdfs:label "Light Heavyweight" .
