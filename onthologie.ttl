@@ -1,59 +1,47 @@
-@prefix cerammi: <https://cours.iut-orsay.fr/npbd/projet/cerammi> .
+
+@prefix cerammi: <https://cours.iut-orsay.fr/npbd/projet/cerammi#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 
 # Classes
 # a = rdf:type
+cerammi:Site a owl:Class .   
 
-cerammi:Champion a owl:Class ;
-    rdfs:label "Champion" ;
-   
+cerammi:Pays a owl:Class .
 
-cerammi:Pays a owl:Class ;
-    rdfs:label "Pays" ;
-    rdfs:comment "Représente un pays d'origine." .
-
-cerammi:CatégorieDePoids a owl:Class ;
-    rdfs:label "Catégorie de Poids" ;
-
+cerammi:Type a owl:Class .   
 
 # Propriétés de données
 cerammi:nom a owl:DatatypeProperty ;
-    rdfs:domain :Champion ;
-    rdfs:range xsd:string ;
-    rdfs:label "Nom" ;
-   
+    rdfs:domain cerammi:Site ;
+    rdfs:range xsd:string  .
 
-cerammi:duréeCommeChampion a owl:DatatypeProperty ;
-    rdfs:domain :Champion ;
-    rdfs:range xsd:integer ;
-    rdfs:label "Durée Comme Champion" ;
-   
+cerammi:annéeInscription a owl:DatatypeProperty ;
+    rdfs:domain cerammi:Site ;
+    rdfs:range xsd:gYear .
 
 # Propriétés d'objets
-cerammi:aPourPaysOrigine a owl:ObjectProperty ;
-    rdfs:domain :Champion ;
-    rdfs:range :Pays ;
-    rdfs:label "A pour Pays Origine" ;
-    
+cerammi:appartientAuPays a owl:ObjectProperty ;
+    rdfs:domain cerammi:Site ;
+    rdfs:range cerammi:Pays .
 
-cerammi:compétitionDansCatégorie a owl:ObjectProperty ;
-    rdfs:domain :Champion ;
-    rdfs:range :CatégorieDePoids ;
-    rdfs:label "Compétition dans Catégorie" ;
-    
+cerammi:typeDeSite a owl:ObjectProperty ;
+    rdfs:domain cerammi:Site ;
+    rdfs:range cerammi:Type .
 
-# Instances (Exemple)
-cerammi:JonJones a :Champion ;
-    :nom "Jon Jones" ;
-    :aPourPaysOrigine :USA ;
-    :compétitionDansCatégorie :LightHeavyweight ;
-    :duréeCommeChampion 2454 .
+# Propriétés géospatiales (GeoSPARQL)
+cerammi:location a owl:ObjectProperty ;
+    rdfs:domain cerammi:Site ;
+    rdfs:range geo:Geometry .
 
-cerammi:USA a :Pays ;
-    rdfs:label "États-Unis" .
+# Inférences ajoutées
+cerammi:estAdjointÀUnPays a owl:ObjectProperty ;
+    rdfs:domain cerammi:Pays ;
+    rdfs:range cerammi:Site .
 
-cerammi:LightHeavyweight a :CatégorieDePoids ;
-    rdfs:label "Light Heavyweight" .
+cerammi:annéeInscriptionRecent a owl:DatatypeProperty ;
+    rdfs:domain cerammi:Site ;
+    rdfs:range xsd:boolean .   
