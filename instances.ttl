@@ -1,4 +1,4 @@
-@prefix cerammi: <https://cours.iut-orsay.fr/npbd/projet/cerammi#> .
+@prefix cerammi: <https://cours.iut-orsay.fr/npbd/projet/cerammi> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
