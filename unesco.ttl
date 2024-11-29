@@ -1,263 +1,474 @@
-@prefix cerammi: <https://cours.iut-orsay.fr/npbd/projet/cerammi> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cerammi: <https://cours.iut-orsay.fr/npbd/projet/cerammi> .
+@base <http://www.w3.org/2002/07/owl#> .
 
-# Classes
-# a = rdf:type
-cerammi:Site a owl:Class .   
+[ rdf:type owl:Ontology ;
+   owl:imports <file:/C:/Git/projet-web-semantique/unesco.ttl>
+ ] .
 
-cerammi:Pays a owl:Class .
+#################################################################
+#    Datatypes
+#################################################################
 
-cerammi:Type a owl:Class .   
-
-# Propriétés de données
-cerammi:nom a owl:DatatypeProperty ;
-    rdfs:domain cerammi:Site ;
-    rdfs:range xsd:string  .
-
-cerammi:annéeInscription a owl:DatatypeProperty ;
-    rdfs:domain cerammi:Site ;
-    rdfs:range xsd:gYear .
-
-# Propriétés d'objets
-cerammi:appartientAuPays a owl:ObjectProperty ;
-    rdfs:domain cerammi:Site ;
-    rdfs:range cerammi:Pays .
-
-cerammi:typeDeSite a owl:ObjectProperty ;
-    rdfs:domain cerammi:Site ;
-    rdfs:range cerammi:Type .
-
-# Propriétés géospatiales (GeoSPARQL)
-cerammi:location a owl:ObjectProperty ;
-    rdfs:domain cerammi:Site ;
-    rdfs:range geo:Geometry .
-
-# Inférences ajoutées
-cerammi:estAdjointÀUnPays a owl:ObjectProperty ;
-    rdfs:domain cerammi:Pays ;
-    rdfs:range cerammi:Site .
-
-cerammi:annéeInscriptionRecent a owl:DatatypeProperty ;
-    rdfs:domain cerammi:Site ;
-    rdfs:range xsd:boolean .   
+###  http://www.opengis.net/ont/geosparql#wktLiteral
+geo:wktLiteral rdf:type rdfs:Datatype .
 
 
-cerammi:Brazil a cerammi:Pays .
-cerammi:Canada a cerammi:Pays .
-cerammi:China a cerammi:Pays .
-cerammi:Ethiopia a cerammi:Pays .
-cerammi:France a cerammi:Pays .
-cerammi:Georgia a cerammi:Pays .
-cerammi:Germany a cerammi:Pays .
-cerammi:Hungary a cerammi:Pays .
-cerammi:Iceland a cerammi:Pays .
-cerammi:India a cerammi:Pays .
-cerammi:Iran a cerammi:Pays .
-cerammi:Israel a cerammi:Pays .
-cerammi:Norway a cerammi:Pays .
-cerammi:Portugal a cerammi:Pays .
-cerammi:Russian_Federation a cerammi:Pays .
-cerammi:South_Africa a cerammi:Pays .
-cerammi:Spain a cerammi:Pays .
-cerammi:Sweden a cerammi:Pays .
-cerammi:United_Kingdom_of_Great_Britain_and_Northern_Ireland a cerammi:Pays .
-cerammi:United_States_of_America a cerammi:Pays .
-cerammi:Zimbabwe a cerammi:Pays .
-cerammi:Austria a cerammi:Pays .
-cerammi:Italy a cerammi:Pays .
-cerammi:Slovenia a cerammi:Pays .
-cerammi:Switzerland a cerammi:Pays .
-cerammi:Australia a cerammi:Pays .
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
 
 
-cerammi:Historic_Centre_of_Salvador_de_Bahia a cerammi:Site ;
-    cerammi:nom "Historic Centre of Salvador de Bahia" ;
-    cerammi:annéeInscription "1985"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Brazil ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "-12.96666667, -38.5"^^geo:wktLiteral .
+#################################################################
+#    Object Properties
+#################################################################
 
-cerammi:Historic_District_of_Old_Qu_bec a cerammi:Site ;
-    cerammi:nom "Historic District of Old Québec" ;
-    cerammi:annéeInscription "1985"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Canada ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "46.80944444, -71.21055556"^^geo:wktLiteral .
-
-cerammi:Chengjiang_Fossil_Site a cerammi:Site ;
-    cerammi:nom "Chengjiang Fossil Site" ;
-    cerammi:annéeInscription "2012"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:China ;
-    cerammi:typeDeSite cerammi:Natural ;
-    cerammi:location "24.6688888889, 102.977222222"^^geo:wktLiteral .
-
-cerammi:Xinjiang_Tianshan a cerammi:Site ;
-    cerammi:nom "Xinjiang Tianshan" ;
-    cerammi:annéeInscription "2013"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:China ;
-    cerammi:typeDeSite cerammi:Natural ;
-    cerammi:location "41.9683333333, 80.3541666667"^^geo:wktLiteral .
-
-cerammi:Lower_Valley_of_the_Awash a cerammi:Site ;
-    cerammi:nom "Lower Valley of the Awash" ;
-    cerammi:annéeInscription "1980"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Ethiopia ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "11.10006, 40.57939"^^geo:wktLiteral .
-
-cerammi:Fasil_Ghebbi__Gondar_Region a cerammi:Site ;
-    cerammi:nom "Fasil Ghebbi, Gondar Region" ;
-    cerammi:annéeInscription "1979"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Ethiopia ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "12.60692, 37.46617"^^geo:wktLiteral .
-
-cerammi:Palace_and_Park_of_Fontainebleau a cerammi:Site ;
-    cerammi:nom "Palace and Park of Fontainebleau" ;
-    cerammi:annéeInscription "1981"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:France ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "48.40194444, 2.698055556"^^geo:wktLiteral .
-
-cerammi:Gelati_Monastery a cerammi:Site ;
-    cerammi:nom "Gelati Monastery" ;
-    cerammi:annéeInscription "1994"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Georgia ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "42.2947222222, 42.7683333333"^^geo:wktLiteral .
-
-cerammi:Collegiate_Church__Castle_and_Old_Town_of_Quedlinb a cerammi:Site ;
-    cerammi:nom "Collegiate Church, Castle and Old Town of Quedlinburg" ;
-    cerammi:annéeInscription "1994"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Germany ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "51.78333, 11.15"^^geo:wktLiteral .
-
-cerammi:Millenary_Benedictine_Abbey_of_Pannonhalma_and_its a cerammi:Site ;
-    cerammi:nom "Millenary Benedictine Abbey of Pannonhalma and its Natural Environment" ;
-    cerammi:annéeInscription "1996"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Hungary ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "47.55889, 17.78444"^^geo:wktLiteral .
-
-cerammi:Vatnaj_kull_National_Park___Dynamic_Nature_of_Fire a cerammi:Site ;
-    cerammi:nom "Vatnajökull National Park - Dynamic Nature of Fire and Ice" ;
-    cerammi:annéeInscription "2019"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Iceland ;
-    cerammi:typeDeSite cerammi:Natural ;
-    cerammi:location "64.577363, -16.8815404444"^^geo:wktLiteral .
-
-cerammi:Archaeological_Site_of_Nalanda_Mahavihara_at_Nalan a cerammi:Site ;
-    cerammi:nom "Archaeological Site of Nalanda Mahavihara at Nalanda, Bihar" ;
-    cerammi:annéeInscription "2016"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:India ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "25.1366666667, 85.4438888889"^^geo:wktLiteral .
-
-cerammi:Shushtar_Historical_Hydraulic_System a cerammi:Site ;
-    cerammi:nom "Shushtar Historical Hydraulic System" ;
-    cerammi:annéeInscription "2009"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Iran ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "32.0186111111, 48.8358333333"^^geo:wktLiteral .
-
-cerammi:Caves_of_Maresha_and_Bet_Guvrin_in_the_Judean_Lowl a cerammi:Site ;
-    cerammi:nom "Caves of Maresha and Bet-Guvrin in the Judean Lowlands as a Microcosm of the Land of the Caves" ;
-    cerammi:annéeInscription "2014"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Israel ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "31.6, 34.8955555556"^^geo:wktLiteral .
-
-cerammi:Urnes_Stave_Church a cerammi:Site ;
-    cerammi:nom "Urnes Stave Church" ;
-    cerammi:annéeInscription "1979"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Norway ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "61.3, 7.33333"^^geo:wktLiteral .
-
-cerammi:Garrison_Border_Town_of_Elvas_and_its_Fortificatio a cerammi:Site ;
-    cerammi:nom "Garrison Border Town of Elvas and its Fortifications" ;
-    cerammi:annéeInscription "2012"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Portugal ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "38.8806194444, -7.1633222222"^^geo:wktLiteral .
-
-cerammi:Assumption_Cathedral_and_Monastery_of_the_town_isl a cerammi:Site ;
-    cerammi:nom "Assumption Cathedral and Monastery of the town-island of Sviyazhsk" ;
-    cerammi:annéeInscription "2017"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Russian_Federation ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "55.7702777778, 48.6527777778"^^geo:wktLiteral .
-
-cerammi:Fossil_Hominid_Sites_of_South_Africa a cerammi:Site ;
-    cerammi:nom "Fossil Hominid Sites of South Africa" ;
-    cerammi:annéeInscription "1999"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:South_Africa ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "-24.15861, 29.17694"^^geo:wktLiteral .
-
-cerammi:Cape_Floral_Region_Protected_Areas a cerammi:Site ;
-    cerammi:nom "Cape Floral Region Protected Areas" ;
-    cerammi:annéeInscription "2004"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:South_Africa ;
-    cerammi:typeDeSite cerammi:Natural ;
-    cerammi:location "-34.3611111111, 18.475"^^geo:wktLiteral .
-
-cerammi:Santiago_de_Compostela__Old_Town_ a cerammi:Site ;
-    cerammi:nom "Santiago de Compostela (Old Town)" ;
-    cerammi:annéeInscription "1985"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Spain ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "42.88076, -8.54468"^^geo:wktLiteral .
-
-cerammi:Engelsberg_Ironworks a cerammi:Site ;
-    cerammi:nom "Engelsberg Ironworks" ;
-    cerammi:annéeInscription "1993"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Sweden ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "59.96667, 16.00833"^^geo:wktLiteral .
-
-cerammi:Dorset_and_East_Devon_Coast a cerammi:Site ;
-    cerammi:nom "Dorset and East Devon Coast" ;
-    cerammi:annéeInscription "2001"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:United_Kingdom_of_Great_Britain_and_Northern_Ireland ;
-    cerammi:typeDeSite cerammi:Natural ;
-    cerammi:location "50.70555556, -2.989888889"^^geo:wktLiteral .
-
-cerammi:Mammoth_Cave_National_Park a cerammi:Site ;
-    cerammi:nom "Mammoth Cave National Park" ;
-    cerammi:annéeInscription "1981"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:United_States_of_America ;
-    cerammi:typeDeSite cerammi:Natural ;
-    cerammi:location "37.18722222, -86.10305556"^^geo:wktLiteral .
-
-cerammi:Great_Zimbabwe_National_Monument a cerammi:Site ;
-    cerammi:nom "Great Zimbabwe National Monument" ;
-    cerammi:annéeInscription "1986"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Zimbabwe ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "-20.28333333, 30.93333333"^^geo:wktLiteral .
-
-cerammi:Prehistoric_Pile_Dwellings_around_the_Alps a cerammi:Site ;
-    cerammi:nom "Prehistoric Pile Dwellings around the Alps" ;
-    cerammi:annéeInscription "2011"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Austria ;
-    cerammi:appartientAuPays cerammi:France ;
-    cerammi:appartientAuPays cerammi:Germany ;
-    cerammi:appartientAuPays cerammi:Italy ;
-    cerammi:appartientAuPays cerammi:Slovenia ;
-    cerammi:appartientAuPays cerammi:Switzerland ;
-    cerammi:typeDeSite cerammi:Cultural ;
-    cerammi:location "47.2783333333, 8.2075"^^geo:wktLiteral .
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiappartientAuPays
+cerammi:appartientAuPays rdf:type owl:ObjectProperty ;
+                         rdfs:domain cerammi:Site ;
+                         rdfs:range cerammi:Pays .
 
 
-cerammi:Ningaloo_Coast a cerammi:Site ;
-    cerammi:nom "Ningaloo Coast" ;
-    cerammi:annéeInscription "2011"^^xsd:gYear ;
-    cerammi:appartientAuPays cerammi:Australia ;
-    cerammi:typeDeSite cerammi:Natural ;
-    cerammi:location "-22.5625, 113.810277778"^^geo:wktLiteral .
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiestAdjointÀUnPays
+cerammi:estAdjointÀUnPays rdf:type owl:ObjectProperty ;
+                          rdfs:domain cerammi:Pays ;
+                          rdfs:range cerammi:Site .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammilocation
+cerammi:location rdf:type owl:ObjectProperty ;
+                 rdfs:domain cerammi:Site ;
+                 rdfs:range geo:Geometry .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammitypeDeSite
+cerammi:typeDeSite rdf:type owl:ObjectProperty ;
+                   rdfs:domain cerammi:Site ;
+                   rdfs:range cerammi:Type .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiannéeInscription
+cerammi:annéeInscription rdf:type owl:DatatypeProperty ;
+                         rdfs:domain cerammi:Site ;
+                         rdfs:range xsd:gYear .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/ceramminom
+cerammi:nom rdf:type owl:DatatypeProperty ;
+            rdfs:domain cerammi:Site ;
+            rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+geo:Geometry rdf:type owl:Class .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiPays
+cerammi:Pays rdf:type owl:Class .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiSite
+cerammi:Site rdf:type owl:Class .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiType
+cerammi:Type rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiArchaeological_Site_of_Nalanda_Mahavihara_at_Nalan
+cerammi:Archaeological_Site_of_Nalanda_Mahavihara_at_Nalan rdf:type cerammi:Site ;
+                                                           cerammi:appartientAuPays cerammi:India ;
+                                                           cerammi:typeDeSite cerammi:Cultural ;
+                                                           cerammi:annéeInscription "2016"^^xsd:gYear ;
+                                                           cerammi:nom "Archaeological Site of Nalanda Mahavihara at Nalanda, Bihar" ;
+                                                           cerammi:location "25.1366666667, 85.4438888889"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiAssumption_Cathedral_and_Monastery_of_the_town_isl
+cerammi:Assumption_Cathedral_and_Monastery_of_the_town_isl rdf:type cerammi:Site ;
+                                                           cerammi:appartientAuPays cerammi:Russian_Federation ;
+                                                           cerammi:typeDeSite cerammi:Cultural ;
+                                                           cerammi:annéeInscription "2017"^^xsd:gYear ;
+                                                           cerammi:nom "Assumption Cathedral and Monastery of the town-island of Sviyazhsk" ;
+                                                           cerammi:location "55.7702777778, 48.6527777778"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiAustralia
+cerammi:Australia rdf:type cerammi:Pays ;
+                  cerammi:nom "Australia"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiAustria
+cerammi:Austria rdf:type cerammi:Pays ;
+                cerammi:nom "Austria"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiBrazil
+cerammi:Brazil rdf:type cerammi:Pays ;
+                  cerammi:nom "Brazil"^^xsd:string .
+
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiCanada
+cerammi:Canada rdf:type cerammi:Pays ;
+                cerammi:nom "Canada"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiCape_Floral_Region_Protected_Areas
+cerammi:Cape_Floral_Region_Protected_Areas rdf:type cerammi:Site ;
+                                           cerammi:appartientAuPays cerammi:South_Africa ;
+                                           cerammi:typeDeSite cerammi:Natural ;
+                                           cerammi:annéeInscription "2004"^^xsd:gYear ;
+                                           cerammi:nom "Cape Floral Region Protected Areas" ;
+                                           cerammi:location "-34.3611111111, 18.475"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiCaves_of_Maresha_and_Bet_Guvrin_in_the_Judean_Lowl
+cerammi:Caves_of_Maresha_and_Bet_Guvrin_in_the_Judean_Lowl rdf:type cerammi:Site ;
+                                                           cerammi:appartientAuPays cerammi:Israel ;
+                                                           cerammi:typeDeSite cerammi:Cultural ;
+                                                           cerammi:annéeInscription "2014"^^xsd:gYear ;
+                                                           cerammi:nom "Caves of Maresha and Bet-Guvrin in the Judean Lowlands as a Microcosm of the Land of the Caves" ;
+                                                           cerammi:location "31.6, 34.8955555556"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiChengjiang_Fossil_Site
+cerammi:Chengjiang_Fossil_Site rdf:type cerammi:Site ;
+                               cerammi:appartientAuPays cerammi:China ;
+                               cerammi:typeDeSite cerammi:Natural ;
+                               cerammi:annéeInscription "2012"^^xsd:gYear ;
+                               cerammi:nom "Chengjiang Fossil Site" ;
+                               cerammi:location "24.6688888889, 102.977222222"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiChina
+cerammi:China rdf:type cerammi:Pays ;
+              cerammi:nom "China"^^xsd:string .
+                  
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiCollegiate_Church__Castle_and_Old_Town_of_Quedlinb
+cerammi:Collegiate_Church__Castle_and_Old_Town_of_Quedlinb rdf:type cerammi:Site ;
+                                                           cerammi:appartientAuPays cerammi:Germany ;
+                                                           cerammi:typeDeSite cerammi:Cultural ;
+                                                           cerammi:annéeInscription "1994"^^xsd:gYear ;
+                                                           cerammi:nom "Collegiate Church, Castle and Old Town of Quedlinburg" ;
+                                                           cerammi:location "51.78333, 11.15"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiCultural
+cerammi:Cultural rdf:type owl:NamedIndividual .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiDorset_and_East_Devon_Coast
+cerammi:Dorset_and_East_Devon_Coast rdf:type cerammi:Site ;
+                                    cerammi:appartientAuPays cerammi:United_Kingdom_of_Great_Britain_and_Northern_Ireland ;
+                                    cerammi:typeDeSite cerammi:Natural ;
+                                    cerammi:annéeInscription "2001"^^xsd:gYear ;
+                                    cerammi:nom "Dorset and East Devon Coast" ;
+                                    cerammi:location "50.70555556, -2.989888889"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiEngelsberg_Ironworks
+cerammi:Engelsberg_Ironworks rdf:type cerammi:Site ;
+                             cerammi:appartientAuPays cerammi:Sweden ;
+                             cerammi:typeDeSite cerammi:Cultural ;
+                             cerammi:annéeInscription "1993"^^xsd:gYear ;
+                             cerammi:nom "Engelsberg Ironworks" ;
+                             cerammi:location "59.96667, 16.00833"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiEthiopia
+cerammi:Ethiopia rdf:type cerammi:Pays ;
+                 cerammi:nom "Ethiopia"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiFasil_Ghebbi__Gondar_Region
+cerammi:Fasil_Ghebbi__Gondar_Region rdf:type cerammi:Site ;
+                                    cerammi:appartientAuPays cerammi:Ethiopia ;
+                                    cerammi:typeDeSite cerammi:Cultural ;
+                                    cerammi:annéeInscription "1979"^^xsd:gYear ;
+                                    cerammi:nom "Fasil Ghebbi, Gondar Region" ;
+                                    cerammi:location "12.60692, 37.46617"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiFossil_Hominid_Sites_of_South_Africa
+cerammi:Fossil_Hominid_Sites_of_South_Africa rdf:type cerammi:Site ;
+                                             cerammi:appartientAuPays cerammi:South_Africa ;
+                                             cerammi:typeDeSite cerammi:Cultural ;
+                                             cerammi:annéeInscription "1999"^^xsd:gYear ;
+                                             cerammi:nom "Fossil Hominid Sites of South Africa" ;
+                                             cerammi:location "-24.15861, 29.17694"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiFrance
+cerammi:France rdf:type cerammi:Pays ;
+              cerammi:nom "France"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiGarrison_Border_Town_of_Elvas_and_its_Fortificatio
+cerammi:Garrison_Border_Town_of_Elvas_and_its_Fortificatio rdf:type cerammi:Site ;
+                                                           cerammi:appartientAuPays cerammi:Portugal ;
+                                                           cerammi:typeDeSite cerammi:Cultural ;
+                                                           cerammi:annéeInscription "2012"^^xsd:gYear ;
+                                                           cerammi:nom "Garrison Border Town of Elvas and its Fortifications" ;
+                                                           cerammi:location "38.8806194444, -7.1633222222"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiGelati_Monastery
+cerammi:Gelati_Monastery rdf:type cerammi:Site ;
+                         cerammi:appartientAuPays cerammi:Georgia ;
+                         cerammi:typeDeSite cerammi:Cultural ;
+                         cerammi:annéeInscription "1994"^^xsd:gYear ;
+                         cerammi:nom "Gelati Monastery" ;
+                         cerammi:location "42.2947222222, 42.7683333333"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiGeorgia
+cerammi:Georgia rdf:type cerammi:Pays ;
+                cerammi:nom "Georgia"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiGermany
+cerammi:Germany rdf:type cerammi:Pays ;
+                cerammi:nom "Germany"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiGreat_Zimbabwe_National_Monument
+cerammi:Great_Zimbabwe_National_Monument rdf:type cerammi:Site ;
+                                         cerammi:appartientAuPays cerammi:Zimbabwe ;
+                                         cerammi:typeDeSite cerammi:Cultural ;
+                                         cerammi:annéeInscription "1986"^^xsd:gYear ;
+                                         cerammi:nom "Great Zimbabwe National Monument" ;
+                                         cerammi:location "-20.28333333, 30.93333333"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiHistoric_Centre_of_Salvador_de_Bahia
+cerammi:Historic_Centre_of_Salvador_de_Bahia rdf:type cerammi:Site ;
+                                             cerammi:appartientAuPays cerammi:Brazil ;
+                                             cerammi:typeDeSite cerammi:Cultural ;
+                                             cerammi:annéeInscription "1985"^^xsd:gYear ;
+                                             cerammi:nom "Historic Centre of Salvador de Bahia" ;
+                                             cerammi:location "-12.96666667, -38.5"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiHistoric_District_of_Old_Qu_bec
+cerammi:Historic_District_of_Old_Qu_bec rdf:type cerammi:Site ;
+                                        cerammi:appartientAuPays cerammi:Canada ;
+                                        cerammi:typeDeSite cerammi:Cultural ;
+                                        cerammi:annéeInscription "1985"^^xsd:gYear ;
+                                        cerammi:nom "Historic District of Old Québec" ;
+                                        cerammi:location "46.80944444, -71.21055556"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiHungary
+cerammi:Hungary rdf:type cerammi:Pays ;
+                cerammi:nom "Hungary"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiIceland
+cerammi:Iceland rdf:type cerammi:Pays ;
+                cerammi:nom "GermIcelandany"^^xsd:string .
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiIndia
+cerammi:India rdf:type cerammi:Pays ;
+              cerammi:nom "India"^^xsd:string .
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiIran
+cerammi:Iran rdf:type cerammi:Pays ;
+             cerammi:nom "Iran"^^xsd:string .
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiIsrael
+cerammi:Israel rdf:type cerammi:Pays ;
+               cerammi:nom "Israel"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiItaly
+cerammi:Italy rdf:type cerammi:Pays ;
+              cerammi:nom "Italy"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiLower_Valley_of_the_Awash
+cerammi:Lower_Valley_of_the_Awash rdf:type cerammi:Site ;
+                                  cerammi:appartientAuPays cerammi:Ethiopia ;
+                                  cerammi:typeDeSite cerammi:Cultural ;
+                                  cerammi:annéeInscription "1980"^^xsd:gYear ;
+                                  cerammi:nom "Lower Valley of the Awash" ;
+                                  cerammi:location "11.10006, 40.57939"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiMammoth_Cave_National_Park
+cerammi:Mammoth_Cave_National_Park rdf:type cerammi:Site ;
+                                   cerammi:appartientAuPays cerammi:United_States_of_America ;
+                                   cerammi:typeDeSite cerammi:Natural ;
+                                   cerammi:annéeInscription "1981"^^xsd:gYear ;
+                                   cerammi:nom "Mammoth Cave National Park" ;
+                                   cerammi:location "37.18722222, -86.10305556"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiMillenary_Benedictine_Abbey_of_Pannonhalma_and_its
+cerammi:Millenary_Benedictine_Abbey_of_Pannonhalma_and_its rdf:type cerammi:Site ;
+                                                           cerammi:appartientAuPays cerammi:Hungary ;
+                                                           cerammi:typeDeSite cerammi:Cultural ;
+                                                           cerammi:annéeInscription "1996"^^xsd:gYear ;
+                                                           cerammi:nom "Millenary Benedictine Abbey of Pannonhalma and its Natural Environment" ;
+                                                           cerammi:location "47.55889, 17.78444"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiNatural
+cerammi:Natural rdf:type owl:NamedIndividual . 
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiNingaloo_Coast
+cerammi:Ningaloo_Coast rdf:type  
+                                cerammi:Site ;
+                       cerammi:appartientAuPays cerammi:Australia ;
+                       cerammi:typeDeSite cerammi:Natural ;
+                       cerammi:annéeInscription "2011"^^xsd:gYear ;
+                       cerammi:nom "Ningaloo Coast" ;
+                       cerammi:location "-22.5625, 113.810277778"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiNorway
+cerammi:Norway rdf:type cerammi:Pays;
+               cerammi:nom "Norway"^^xsd:string .
+  
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiPalace_and_Park_of_Fontainebleau
+cerammi:Palace_and_Park_of_Fontainebleau rdf:type cerammi:Site ;
+                                         cerammi:appartientAuPays cerammi:France ;
+                                         cerammi:typeDeSite cerammi:Cultural ;
+                                         cerammi:annéeInscription "1981"^^xsd:gYear ;
+                                         cerammi:nom "Palace and Park of Fontainebleau" ;
+                                         cerammi:location "48.40194444, 2.698055556"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiPortugal
+cerammi:Portugal rdf:type cerammi:Pays;
+                cerammi:nom "Portugal"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiPrehistoric_Pile_Dwellings_around_the_Alps
+cerammi:Prehistoric_Pile_Dwellings_around_the_Alps rdf:type cerammi:Site ;
+                                                   cerammi:appartientAuPays cerammi:Austria ,
+                                                                            cerammi:France ,
+                                                                            cerammi:Germany ,
+                                                                            cerammi:Italy ,
+                                                                            cerammi:Slovenia ,
+                                                                            cerammi:Switzerland ;
+                                                   cerammi:typeDeSite cerammi:Cultural ;
+                                                   cerammi:annéeInscription "2011"^^xsd:gYear ;
+                                                   cerammi:nom "Prehistoric Pile Dwellings around the Alps" ;
+                                                   cerammi:location "47.2783333333, 8.2075"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiRussian_Federation
+cerammi:Russian_Federation rdf:type cerammi:Pays ;
+                           cerammi:nom "Russian_Federation"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiSantiago_de_Compostela__Old_Town_
+cerammi:Santiago_de_Compostela__Old_Town_ rdf:type cerammi:Site ;
+                                          cerammi:appartientAuPays cerammi:Spain ;
+                                          cerammi:typeDeSite cerammi:Cultural ;
+                                          cerammi:annéeInscription "1985"^^xsd:gYear ;
+                                          cerammi:nom "Santiago de Compostela (Old Town)" ;
+                                          cerammi:location "42.88076, -8.54468"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiShushtar_Historical_Hydraulic_System
+cerammi:Shushtar_Historical_Hydraulic_System rdf:type cerammi:Site ;
+                                             cerammi:appartientAuPays cerammi:Iran ;
+                                             cerammi:typeDeSite cerammi:Cultural ;
+                                             cerammi:annéeInscription "2009"^^xsd:gYear ;
+                                             cerammi:nom "Shushtar Historical Hydraulic System" ;
+                                             cerammi:location "32.0186111111, 48.8358333333"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiSlovenia
+cerammi:Slovenia rdf:type cerammi:Pays ;
+                 cerammi:nom "Slovenia"^^xsd:string . 
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiSouth_Africa
+cerammi:South_Africa rdf:type cerammi:Pays ;
+                     cerammi:nom "South_Africa"^^xsd:string . 
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiSpain
+cerammi:Spain rdf:type  cerammi:Pays ;
+              cerammi:nom "Spain"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiSweden
+cerammi:Sweden rdf:type  cerammi:Pays ;
+               cerammi:nom "Sweden"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiSwitzerland
+cerammi:Switzerland rdf:type  cerammi:Pays ;
+                    cerammi:nom "Switzerland"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiUnited_Kingdom_of_Great_Britain_and_Northern_Ireland
+cerammi:United_Kingdom_of_Great_Britain_and_Northern_Ireland rdf:type cerammi:Pays ;
+                                                             cerammi:nom "United_Kingdom_of_Great_Britain_and_Northern_Ireland"^^xsd:string . 
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiUnited_States_of_America
+cerammi:United_States_of_America rdf:type  cerammi:Pays ;
+                                 cerammi:nom "United_States_of_America"^^xsd:string .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiUrnes_Stave_Church
+cerammi:Urnes_Stave_Church rdf:type cerammi:Site ;
+                           cerammi:appartientAuPays cerammi:Norway ;
+                           cerammi:typeDeSite cerammi:Cultural ;
+                           cerammi:annéeInscription "1979"^^xsd:gYear ;
+                           cerammi:nom "Urnes Stave Church" ;
+                           cerammi:location "61.3, 7.33333"^^geo:wktLiteral .
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiVatnaj_kull_National_Park___Dynamic_Nature_of_Fire
+cerammi:Vatnaj_kull_National_Park___Dynamic_Nature_of_Fire rdf:type cerammi:Site ;
+                                                           cerammi:appartientAuPays cerammi:Iceland ;
+                                                           cerammi:typeDeSite cerammi:Natural ;
+                                                           cerammi:annéeInscription "2019"^^xsd:gYear ;
+                                                           cerammi:nom "Vatnajökull National Park - Dynamic Nature of Fire and Ice" ;
+                                                           cerammi:location "64.577363, -16.8815404444"^^geo:wktLiteral .
+                                                         
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiXinjiang_Tianshan
+cerammi:Xinjiang_Tianshan rdf:type cerammi:Site ;
+                          cerammi:appartientAuPays cerammi:China ;
+                          cerammi:typeDeSite cerammi:Natural ;
+                          cerammi:annéeInscription "2013"^^xsd:gYear ;
+                          cerammi:nom "Xinjiang Tianshan" ;
+                          cerammi:location "41.9683333333, 80.3541666667"^^geo:wktLiteral .
+                      
+
+
+###  https://cours.iut-orsay.fr/npbd/projet/cerammiZimbabwe
+cerammi:Zimbabwe rdf:type  cerammi:Pays ;
+                cerammi:nom "Zimbabwe"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
