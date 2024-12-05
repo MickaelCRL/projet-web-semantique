@@ -3,4 +3,5 @@ interface RepositorieData {
   pays: string;
   etat: string;
   idh: number;
+  type: string;
 }

@@ -4,19 +4,26 @@ export const fetchDataFromRepository = async (): Promise<RepositorieData[]> => {
         PREFIX cerammi: <https://cours.iut-orsay.fr/npbd/projet/cerammi#>
         PREFIX wdt: <http://www.wikidata.org/prop/direct/>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        SELECT ?NomSite ?NomPays ?EtatSite ?IDH WHERE {
-          ?Site a cerammi:Site;
-              cerammi:appartientAuPays ?pays;
-              cerammi:etat ?EtatSite;
-              cerammi:nom ?NomSite.
-          ?pays a cerammi:Pays;
-              cerammi:nom ?NomPays.
-          SERVICE <https://query.wikidata.org/sparql> {
-              ?WikidataPays rdfs:label ?NomPays.
-              FILTER(LANG(?NomPays) = "fr")
-              ?WikidataPays wdt:P1081 ?IDH.
-          }
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+        SELECT ?NomSite ?NomPays ?EtatSite ?TypeSite ?IDH WHERE {
+        ?Site a cerammi:Site;
+                  cerammi:nom ?NomSite;
+                  cerammi:etat ?EtatSite;
+                cerammi:appartientAuPays ?Pays;
+                cerammi:type ?TypeSite.
+            ?Pays a cerammi:Pays;
+                  cerammi:nom ?NomPays.
+                  
+            SERVICE <https://query.wikidata.org/sparql> {
+                ?WikidataPays rdfs:label ?NomPays.  
+                FILTER(LANG(?NomPays) = "fr")       
+                ?WikidataPays wdt:P1081 ?IDH.      
+            }
         }
+        ORDER BY ?IDH
         LIMIT 100
       `;
     const endpoint = "http://localhost:7200/repositories/CERAMMI";
