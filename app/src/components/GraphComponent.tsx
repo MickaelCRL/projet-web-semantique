@@ -11,6 +11,7 @@ import {
 import { useEffect, useState } from "react";
 import { Scatter } from "react-chartjs-2";
 
+// Enregistrement des modules Chart.js
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -19,6 +20,14 @@ ChartJS.register(
   Tooltip,
   Legend
 );
+
+interface RepositorieData {
+  site: string;
+  pays: string;
+  etat: string;
+  idh: number;
+  type: string;
+}
 
 const GraphComponent = () => {
   const [data, setData] = useState<RepositorieData[]>([]);
@@ -41,20 +50,71 @@ const GraphComponent = () => {
   const chartData = {
     datasets: [
       {
-        label: "Sites UNESCO",
-        data: data.map((item) => ({
-          x: item.idh,
-          y:
-            item.etat === "Bien conservé" ? 3 : item.etat === "Délabré" ? 2 : 1,
-          label: item.site,
-        })),
-        backgroundColor: data.map((item) =>
-          item.etat === "Bien conservé"
-            ? "green"
-            : item.etat === "Délabré"
-            ? "orange"
-            : "red"
-        ),
+        label: "Sites UNESCO Culturels",
+        data: data
+          .filter(
+            (item) =>
+              item.type === "Culturel" &&
+              item.idh !== null &&
+              item.etat !== null
+          )
+          .map((item) => ({
+            x: item.idh,
+            y:
+              item.etat === "Bien conservé"
+                ? 3
+                : item.etat === "Délabré"
+                ? 2
+                : 1,
+            label: item.site,
+          })),
+        pointBackgroundColor: data
+          .filter(
+            (item) =>
+              item.type === "Culturel" &&
+              item.idh !== null &&
+              item.etat !== null
+          )
+          .map((item) =>
+            item.etat === "Bien conservé"
+              ? "green"
+              : item.etat === "Délabré"
+              ? "orange"
+              : "red"
+          ),
+        pointStyle: "circle",
+        pointRadius: 5,
+      },
+      {
+        label: "Sites UNESCO Naturels",
+        data: data
+          .filter(
+            (item) =>
+              item.type === "Naturel" && item.idh !== null && item.etat !== null
+          )
+          .map((item) => ({
+            x: item.idh,
+            y:
+              item.etat === "Bien conservé"
+                ? 3
+                : item.etat === "Délabré"
+                ? 2
+                : 1,
+            label: item.site,
+          })),
+        pointBackgroundColor: data
+          .filter(
+            (item) =>
+              item.type === "Naturel" && item.idh !== null && item.etat !== null
+          )
+          .map((item) =>
+            item.etat === "Bien conservé"
+              ? "green"
+              : item.etat === "Délabré"
+              ? "orange"
+              : "red"
+          ),
+        pointStyle: "rect",
         pointRadius: 5,
       },
     ],
@@ -77,6 +137,16 @@ const GraphComponent = () => {
                 ? "Délabré"
                 : "En danger"
             })`;
+          },
+        },
+      },
+      legend: {
+        display: true,
+        position: "top" as const,
+        labels: {
+          usePointStyle: true,
+          font: {
+            size: 12,
           },
         },
       },

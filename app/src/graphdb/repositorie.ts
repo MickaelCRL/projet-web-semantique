@@ -26,7 +26,7 @@ export const fetchDataFromRepository = async (): Promise<RepositorieData[]> => {
         ORDER BY ?IDH
         LIMIT 100
       `;
-    const endpoint = "http://localhost:7200/repositories/CERAMMI";
+    const endpoint = "http://localhost:7200/repositories/unesco";
     const response = await fetch(
       endpoint + "?query=" + encodeURIComponent(query),
       {
@@ -48,6 +48,7 @@ export const fetchDataFromRepository = async (): Promise<RepositorieData[]> => {
         pays: item.NomPays.value,
         etat: item.EtatSite.value,
         idh: parseFloat(item.IDH.value),
+        type: item.TypeSite.value,
       })
     );
 

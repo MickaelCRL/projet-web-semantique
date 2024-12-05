@@ -1,13 +1,6 @@
 import { fetchDataFromRepository } from "@/graphdb/repositorie";
 import React, { useEffect, useState } from "react";
 
-interface RepositorieData {
-  pays: string;
-  site: string;
-  etat: string;
-  idh: number;
-}
-
 const TableComponent = () => {
   const [data, setData] = useState<RepositorieData[]>([]);
   const [loading, setLoading] = useState(true);
@@ -35,6 +28,7 @@ const TableComponent = () => {
               <th style={styles.header}>Nom du Site</th>
               <th style={styles.header}>État du Site</th>
               <th style={styles.header}>IDH</th>
+              <th style={styles.header}>Type</th>
             </tr>
           </thead>
           <tbody>
@@ -44,6 +38,7 @@ const TableComponent = () => {
                 <td style={styles.cell}>{row.site}</td>
                 <td style={styles.cell}>{row.etat}</td>
                 <td style={styles.cell}>{row.idh.toFixed(3)}</td>
+                <td style={styles.cell}>{row.type}</td>
               </tr>
             ))}
           </tbody>
