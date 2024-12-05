@@ -1,0 +1,1044 @@
+
+@prefix cerammi: <https://cours.iut-orsay.fr/npbd/projet/cerammi#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+geo:wktLiteral a rdfs:Datatype .
+
+cerammi:AD a cerammi:Pays ;
+    cerammi:nom "Andorre"@fr ;
+    cerammi:location "POINT(1.601554 42.546245)"^^geo:wktLiteral .
+
+cerammi:AE a cerammi:Pays ;
+    cerammi:nom "Émirats arabes unis"@fr ;
+    cerammi:location "POINT(53.847818 23.424076)"^^geo:wktLiteral .
+
+cerammi:AF a cerammi:Pays ;
+    cerammi:nom "Afghanistan"@fr ;
+    cerammi:location "POINT(67.709953 33.93911)"^^geo:wktLiteral .
+
+cerammi:AG a cerammi:Pays ;
+    cerammi:nom "Antigua-et-Barbuda"@fr ;
+    cerammi:location "POINT(-61.796428 17.060816)"^^geo:wktLiteral .
+
+cerammi:AI a cerammi:Pays ;
+    cerammi:nom "Anguilla"@fr ;
+    cerammi:location "POINT(-63.068615 18.220554)"^^geo:wktLiteral .
+
+cerammi:AL a cerammi:Pays ;
+    cerammi:nom "Albanie"@fr ;
+    cerammi:location "POINT(20.168331 41.153332)"^^geo:wktLiteral .
+
+cerammi:AM a cerammi:Pays ;
+    cerammi:nom "Arménie"@fr ;
+    cerammi:location "POINT(45.038189 40.069099)"^^geo:wktLiteral .
+
+cerammi:AN a cerammi:Pays ;
+    cerammi:nom "Antilles néerlandaises"@fr ;
+    cerammi:location "POINT(-69.060087 12.226079)"^^geo:wktLiteral .
+
+cerammi:AO a cerammi:Pays ;
+    cerammi:nom "Angola"@fr ;
+    cerammi:location "POINT(17.873887 -11.202692)"^^geo:wktLiteral .
+
+cerammi:AQ a cerammi:Pays ;
+    cerammi:nom "Antarctique"@fr ;
+    cerammi:location "POINT(-0.071389 -75.250973)"^^geo:wktLiteral .
+
+cerammi:RA a cerammi:Pays ;
+    cerammi:nom "Argentine"@fr ;
+    cerammi:location "POINT(-63.616672 -38.416097)"^^geo:wktLiteral .
+
+cerammi:AS a cerammi:Pays ;
+    cerammi:nom "Samoa américaines"@fr ;
+    cerammi:location "POINT(-170.132217 -14.270972)"^^geo:wktLiteral .
+
+cerammi:AT a cerammi:Pays ;
+    cerammi:nom "Autriche"@fr ;
+    cerammi:location "POINT(14.550072 47.516231)"^^geo:wktLiteral .
+
+cerammi:AU a cerammi:Pays ;
+    cerammi:nom "Australie"@fr ;
+    cerammi:location "POINT(133.775136 -25.274398)"^^geo:wktLiteral .
+
+cerammi:AW a cerammi:Pays ;
+    cerammi:nom "Aruba"@fr ;
+    cerammi:location "POINT(-69.968338 12.52111)"^^geo:wktLiteral .
+
+cerammi:AZ a cerammi:Pays ;
+    cerammi:nom "Azerbaïdjan"@fr ;
+    cerammi:location "POINT(47.576927 40.143105)"^^geo:wktLiteral .
+
+cerammi:BA a cerammi:Pays ;
+    cerammi:nom "Bosnie-Herzégovine"@fr ;
+    cerammi:location "POINT(17.679076 43.915886)"^^geo:wktLiteral .
+
+cerammi:BB a cerammi:Pays ;
+    cerammi:nom "Barbade"@fr ;
+    cerammi:location "POINT(-59.543198 13.193887)"^^geo:wktLiteral .
+
+cerammi:BD a cerammi:Pays ;
+    cerammi:nom "Bangladesh"@fr ;
+    cerammi:location "POINT(90.356331 23.684994)"^^geo:wktLiteral .
+
+cerammi:BE a cerammi:Pays ;
+    cerammi:nom "Belgique"@fr ;
+    cerammi:location "POINT(4.469936 50.503887)"^^geo:wktLiteral .
+
+cerammi:BF a cerammi:Pays ;
+    cerammi:nom "Burkina Faso"@fr ;
+    cerammi:location "POINT(-1.561593 12.238333)"^^geo:wktLiteral .
+
+cerammi:BG a cerammi:Pays ;
+    cerammi:nom "Bulgarie"@fr ;
+    cerammi:location "POINT(25.48583 42.733883)"^^geo:wktLiteral .
+
+cerammi:BH a cerammi:Pays ;
+    cerammi:nom "Bahreïn"@fr ;
+    cerammi:location "POINT(50.637772 25.930414)"^^geo:wktLiteral .
+
+cerammi:BI a cerammi:Pays ;
+    cerammi:nom "Burundi"@fr ;
+    cerammi:location "POINT(29.918886 -3.373056)"^^geo:wktLiteral .
+
+cerammi:BJ a cerammi:Pays ;
+    cerammi:nom "Bénin"@fr ;
+    cerammi:location "POINT(2.315834 9.30769)"^^geo:wktLiteral .
+
+cerammi:BM a cerammi:Pays ;
+    cerammi:nom "Bermudes"@fr ;
+    cerammi:location "POINT(-64.75737 32.321384)"^^geo:wktLiteral .
+
+cerammi:BN a cerammi:Pays ;
+    cerammi:nom "Brunei"@fr ;
+    cerammi:location "POINT(114.727669 4.535277)"^^geo:wktLiteral .
+
+cerammi:BO a cerammi:Pays ;
+    cerammi:nom "Bolivie"@fr ;
+    cerammi:location "POINT(-63.588653 -16.290154)"^^geo:wktLiteral .
+
+cerammi:BR a cerammi:Pays ;
+    cerammi:nom "Brésil"@fr ;
+    cerammi:location "POINT(-51.92528 -14.235004)"^^geo:wktLiteral .
+
+cerammi:BS a cerammi:Pays ;
+    cerammi:nom "Bahamas"@fr ;
+    cerammi:location "POINT(-77.39628 25.03428)"^^geo:wktLiteral .
+
+cerammi:BT a cerammi:Pays ;
+    cerammi:nom "Bhoutan"@fr ;
+    cerammi:location "POINT(90.433601 27.514162)"^^geo:wktLiteral .
+
+cerammi:BV a cerammi:Pays ;
+    cerammi:nom "Bouvet (Île)"@fr ;
+    cerammi:location "POINT(3.413194 -54.423199)"^^geo:wktLiteral .
+
+cerammi:BW a cerammi:Pays ;
+    cerammi:nom "Botswana"@fr ;
+    cerammi:location "POINT(24.684866 -22.328474)"^^geo:wktLiteral .
+
+cerammi:BY a cerammi:Pays ;
+    cerammi:nom "Biélorussie"@fr ;
+    cerammi:location "POINT(27.953389 53.709807)"^^geo:wktLiteral .
+
+cerammi:BZ a cerammi:Pays ;
+    cerammi:nom "Belize"@fr ;
+    cerammi:location "POINT(-88.49765 17.189877)"^^geo:wktLiteral .
+
+cerammi:CA a cerammi:Pays ;
+    cerammi:nom "Canada"@fr ;
+    cerammi:location "POINT(-106.346771 56.130366)"^^geo:wktLiteral .
+
+cerammi:CC a cerammi:Pays ;
+    cerammi:nom "Cocos-Keeling (Îles)"@fr ;
+    cerammi:location "POINT(96.870956 -12.164165)"^^geo:wktLiteral .
+
+cerammi:CD a cerammi:Pays ;
+    cerammi:nom "Congo (RDC)"@fr ;
+    cerammi:location "POINT(21.758664 -4.038333)"^^geo:wktLiteral .
+
+cerammi:CF a cerammi:Pays ;
+    cerammi:nom "République centrafricaine"@fr ;
+    cerammi:location "POINT(20.939444 6.611111)"^^geo:wktLiteral .
+
+cerammi:CG a cerammi:Pays ;
+    cerammi:nom "Congo (République)"@fr ;
+    cerammi:location "POINT(15.827659 -0.228021)"^^geo:wktLiteral .
+
+cerammi:CH a cerammi:Pays ;
+    cerammi:nom "Suisse"@fr ;
+    cerammi:location "POINT(8.227512 46.818188)"^^geo:wktLiteral .
+
+cerammi:CI a cerammi:Pays ;
+    cerammi:nom "Côte d'Ivoire"@fr ;
+    cerammi:location "POINT(-5.54708 7.539989)"^^geo:wktLiteral .
+
+cerammi:CK a cerammi:Pays ;
+    cerammi:nom "Cook (Îles)"@fr ;
+    cerammi:location "POINT(-159.777671 -21.236736)"^^geo:wktLiteral .
+
+cerammi:CL a cerammi:Pays ;
+    cerammi:nom "Chili"@fr ;
+    cerammi:location "POINT(-71.542969 -35.675147)"^^geo:wktLiteral .
+
+cerammi:CM a cerammi:Pays ;
+    cerammi:nom "Cameroun"@fr ;
+    cerammi:location "POINT(12.354722 7.369722)"^^geo:wktLiteral .
+
+cerammi:CN a cerammi:Pays ;
+    cerammi:nom "China"@fr ;
+    cerammi:location "POINT(104.195397 35.86166)"^^geo:wktLiteral .
+
+cerammi:CO a cerammi:Pays ;
+    cerammi:nom "Colombie"@fr ;
+    cerammi:location "POINT(-74.297333 4.570868)"^^geo:wktLiteral .
+
+cerammi:CR a cerammi:Pays ;
+    cerammi:nom "Costa Rica"@fr ;
+    cerammi:location "POINT(-83.753428 9.748917)"^^geo:wktLiteral .
+
+cerammi:CU a cerammi:Pays ;
+    cerammi:nom "Cuba"@fr ;
+    cerammi:location "POINT(-77.781167 21.521757)"^^geo:wktLiteral .
+
+cerammi:CV a cerammi:Pays ;
+    cerammi:nom "Cap-Vert"@fr ;
+    cerammi:location "POINT(-24.013197 16.002082)"^^geo:wktLiteral .
+
+cerammi:CX a cerammi:Pays ;
+    cerammi:nom "Christmas (Île)"@fr ;
+    cerammi:location "POINT(105.690449 -10.447525)"^^geo:wktLiteral .
+
+cerammi:CY a cerammi:Pays ;
+    cerammi:nom "Chypre"@fr ;
+    cerammi:location "POINT(33.429859 35.126413)"^^geo:wktLiteral .
+
+cerammi:CZ a cerammi:Pays ;
+    cerammi:nom "République tchèque"@fr ;
+    cerammi:location "POINT(15.472962 49.817492)"^^geo:wktLiteral .
+
+cerammi:DE a cerammi:Pays ;
+    cerammi:nom "Allemagne"@fr ;
+    cerammi:location "POINT(10.451526 51.165691)"^^geo:wktLiteral .
+
+cerammi:DJ a cerammi:Pays ;
+    cerammi:nom "Djibouti"@fr ;
+    cerammi:location "POINT(42.590275 11.825138)"^^geo:wktLiteral .
+
+cerammi:DK a cerammi:Pays ;
+    cerammi:nom "Danemark"@fr ;
+    cerammi:location "POINT(9.501785 56.26392)"^^geo:wktLiteral .
+
+cerammi:MP a cerammi:Pays ;
+    cerammi:nom "Dominique"@fr ;
+    cerammi:location "POINT(-61.370976 15.414999)"^^geo:wktLiteral .
+
+cerammi:DO a cerammi:Pays ;
+    cerammi:nom "République dominicaine"@fr ;
+    cerammi:location "POINT(-70.162651 18.735693)"^^geo:wktLiteral .
+
+cerammi:DZ a cerammi:Pays ;
+    cerammi:nom "Algérie"@fr ;
+    cerammi:location "POINT(1.659626 28.033886)"^^geo:wktLiteral .
+
+cerammi:EC a cerammi:Pays ;
+    cerammi:nom "Équateur"@fr ;
+    cerammi:location "POINT(-78.183406 -1.831239)"^^geo:wktLiteral .
+
+cerammi:EE a cerammi:Pays ;
+    cerammi:nom "Estonie"@fr ;
+    cerammi:location "POINT(25.013607 58.595272)"^^geo:wktLiteral .
+
+cerammi:EG a cerammi:Pays ;
+    cerammi:nom "Égypte"@fr ;
+    cerammi:location "POINT(30.802498 26.820553)"^^geo:wktLiteral .
+
+
+cerammi:ER a cerammi:Pays ;
+    cerammi:nom "Érythrée"@fr ;
+    cerammi:location "POINT(39.782334 15.179384)"^^geo:wktLiteral .
+
+cerammi:ES a cerammi:Pays ;
+    cerammi:nom "Espagne"@fr ;
+    cerammi:location "POINT(-3.74922 40.463667)"^^geo:wktLiteral .
+
+cerammi:PR a cerammi:Pays ;
+    cerammi:nom "Éthiopie"@fr ;
+    cerammi:location "POINT(40.489673 9.145)"^^geo:wktLiteral .
+
+cerammi:FI a cerammi:Pays ;
+    cerammi:nom "Finlande"@fr ;
+    cerammi:location "POINT(25.748151 61.92411)"^^geo:wktLiteral .
+
+cerammi:FJ a cerammi:Pays ;
+    cerammi:nom "Fidji"@fr ;
+    cerammi:location "POINT(179.414413 -16.578193)"^^geo:wktLiteral .
+
+cerammi:FK a cerammi:Pays ;
+    cerammi:nom "Îles Falkland"@fr ;
+    cerammi:location "POINT(-59.523613 -51.796253)"^^geo:wktLiteral .
+
+cerammi:FM a cerammi:Pays ;
+    cerammi:nom "Micronésie"@fr ;
+    cerammi:location "POINT(150.550812 7.425554)"^^geo:wktLiteral .
+
+cerammi:FO a cerammi:Pays ;
+    cerammi:nom "Îles Féroé"@fr ;
+    cerammi:location "POINT(-6.911806 61.892635)"^^geo:wktLiteral .
+
+cerammi:FR a cerammi:Pays ;
+    cerammi:nom "France"@fr ;
+    cerammi:location "POINT(2.213749 46.227638)"^^geo:wktLiteral .
+
+cerammi:DG a cerammi:Pays ;
+    cerammi:nom "Gabon"@fr ;
+    cerammi:location "POINT(11.609444 -0.803689)"^^geo:wktLiteral .
+
+cerammi:Go a cerammi:Pays ;
+    cerammi:nom "Royaume-Uni"@fr ;
+    cerammi:location "POINT(-3.435973 55.378051)"^^geo:wktLiteral .
+
+cerammi:DB a cerammi:Pays ;
+    cerammi:nom "Grenade"@fr ;
+    cerammi:location "POINT(-61.604171 12.262776)"^^geo:wktLiteral .
+
+cerammi:GE a cerammi:Pays ;
+    cerammi:nom "Géorgie"@fr ;
+    cerammi:location "POINT(43.356892 42.315407)"^^geo:wktLiteral .
+
+cerammi:GF a cerammi:Pays ;
+    cerammi:nom "Guyane française"@fr ;
+    cerammi:location "POINT(-53.125782 3.933889)"^^geo:wktLiteral .
+
+cerammi:GG a cerammi:Pays ;
+    cerammi:nom "Guernesey"@fr ;
+    cerammi:location "POINT(-2.585278 49.465691)"^^geo:wktLiteral .
+
+cerammi:GH a cerammi:Pays ;
+    cerammi:nom "Ghana"@fr ;
+    cerammi:location "POINT(-1.023194 7.946527)"^^geo:wktLiteral .
+
+cerammi:GI a cerammi:Pays ;
+    cerammi:nom "Gibraltar"@fr ;
+    cerammi:location "POINT(-5.345374 36.137741)"^^geo:wktLiteral .
+
+cerammi:GL a cerammi:Pays ;
+    cerammi:nom "Groenland"@fr ;
+    cerammi:location "POINT(-42.604303 71.706936)"^^geo:wktLiteral .
+
+cerammi:GM a cerammi:Pays ;
+    cerammi:nom "Gambie"@fr ;
+    cerammi:location "POINT(-15.310139 13.443182)"^^geo:wktLiteral .
+
+cerammi:GN a cerammi:Pays ;
+    cerammi:nom "Guinée"@fr ;
+    cerammi:location "POINT(-9.696645 9.945587)"^^geo:wktLiteral .
+
+cerammi:GP a cerammi:Pays ;
+    cerammi:nom "Guadeloupe"@fr ;
+    cerammi:location "POINT(-62.067641 16.995971)"^^geo:wktLiteral .
+
+cerammi:GQ a cerammi:Pays ;
+    cerammi:nom "Guinée équatoriale"@fr ;
+    cerammi:location "POINT(10.267895 1.650801)"^^geo:wktLiteral .
+
+cerammi:GR a cerammi:Pays ;
+    cerammi:nom "Grèce"@fr ;
+    cerammi:location "POINT(21.824312 39.074208)"^^geo:wktLiteral .
+
+cerammi:GS a cerammi:Pays ;
+    cerammi:nom "Géorgie du Sud et Sandwich du Sud (Îles)"@fr ;
+    cerammi:location "POINT(-36.587909 -54.429579)"^^geo:wktLiteral .
+
+cerammi:GT a cerammi:Pays ;
+    cerammi:nom "Guatemala"@fr ;
+    cerammi:location "POINT(-90.230759 15.783471)"^^geo:wktLiteral .
+
+cerammi:GU a cerammi:Pays ;
+    cerammi:nom "Guam"@fr ;
+    cerammi:location "POINT(144.793731 13.444304)"^^geo:wktLiteral .
+
+cerammi:GW a cerammi:Pays ;
+    cerammi:nom "Guinée-Bissau"@fr ;
+    cerammi:location "POINT(-15.180413 11.803749)"^^geo:wktLiteral .
+
+cerammi:GY a cerammi:Pays ;
+    cerammi:nom "Guyana"@fr ;
+    cerammi:location "POINT(-58.93018 4.860416)"^^geo:wktLiteral .
+
+cerammi:GZ a cerammi:Pays ;
+    cerammi:nom "Bande de Gaza"@fr ;
+    cerammi:location "POINT(34.308825 31.354676)"^^geo:wktLiteral .
+
+cerammi:HK a cerammi:Pays ;
+    cerammi:nom "Hong Kong"@fr ;
+    cerammi:location "POINT(114.109497 22.396428)"^^geo:wktLiteral .
+
+cerammi:HM a cerammi:Pays ;
+    cerammi:nom "Heard et McDonald (Îles)"@fr ;
+    cerammi:location "POINT(73.504158 -53.08181)"^^geo:wktLiteral .
+
+cerammi:HN a cerammi:Pays ;
+    cerammi:nom "Honduras"@fr ;
+    cerammi:location "POINT(-86.241905 15.199999)"^^geo:wktLiteral .
+
+cerammi:HR a cerammi:Pays ;
+    cerammi:nom "Croatie"@fr ;
+    cerammi:location "POINT(15.2 45.1)"^^geo:wktLiteral .
+
+cerammi:MT a cerammi:Pays ;
+    cerammi:nom "Haïti"@fr ;
+    cerammi:location "POINT(-72.285215 18.971187)"^^geo:wktLiteral .
+
+cerammi:HU a cerammi:Pays ;
+    cerammi:nom "Hongrie"@fr ;
+    cerammi:location "POINT(19.503304 47.162494)"^^geo:wktLiteral .
+
+cerammi:ID a cerammi:Pays ;
+    cerammi:nom "Indonésie"@fr ;
+    cerammi:location "POINT(113.921327 -0.789275)"^^geo:wktLiteral .
+
+cerammi:IE a cerammi:Pays ;
+    cerammi:nom "Irlande"@fr ;
+    cerammi:location "POINT(-8.24389 53.41291)"^^geo:wktLiteral .
+
+
+cerammi:IM a cerammi:Pays ;
+    cerammi:nom "Man (Île)"@fr ;
+    cerammi:location "POINT(-4.548056 54.236107)"^^geo:wktLiteral .
+
+cerammi:IN a cerammi:Pays ;
+    cerammi:nom "Inde"@fr ;
+    cerammi:location "POINT(78.96288 20.593684)"^^geo:wktLiteral .
+
+cerammi:IO a cerammi:Pays ;
+    cerammi:nom "Territoire britannique de l'océan Indien"@fr ;
+    cerammi:location "POINT(71.876519 -6.343194)"^^geo:wktLiteral .
+
+cerammi:IQ a cerammi:Pays ;
+    cerammi:nom "Irak"@fr ;
+    cerammi:location "POINT(43.679291 33.223191)"^^geo:wktLiteral .
+
+cerammi:IR a cerammi:Pays ;
+    cerammi:nom "Iran"@fr ;
+    cerammi:location "POINT(53.688046 32.427908)"^^geo:wktLiteral .
+
+cerammi:IS a cerammi:Pays ;
+    cerammi:nom "Islande"@fr ;
+    cerammi:location "POINT(-19.020835 64.963051)"^^geo:wktLiteral .
+
+cerammi:IT a cerammi:Pays ;
+    cerammi:nom "Italie"@fr ;
+    cerammi:location "POINT(12.56738 41.87194)"^^geo:wktLiteral .
+
+cerammi:JE a cerammi:Pays ;
+    cerammi:nom "Jersey"@fr ;
+    cerammi:location "POINT(-2.13125 49.214439)"^^geo:wktLiteral .
+
+cerammi:JM a cerammi:Pays ;
+    cerammi:nom "Jamaïque"@fr ;
+    cerammi:location "POINT(-77.297508 18.109581)"^^geo:wktLiteral .
+
+cerammi:JO a cerammi:Pays ;
+    cerammi:nom "Jordanie"@fr ;
+    cerammi:location "POINT(36.238414 30.585164)"^^geo:wktLiteral .
+
+cerammi:JP a cerammi:Pays ;
+    cerammi:nom "Japon"@fr ;
+    cerammi:location "POINT(138.252924 36.204824)"^^geo:wktLiteral .
+
+cerammi:KE a cerammi:Pays ;
+    cerammi:nom "Kenya"@fr ;
+    cerammi:location "POINT(37.906193 -0.023559)"^^geo:wktLiteral .
+
+cerammi:KG a cerammi:Pays ;
+    cerammi:nom "Kirghizstan"@fr ;
+    cerammi:location "POINT(74.766098 41.20438)"^^geo:wktLiteral .
+
+cerammi:KH a cerammi:Pays ;
+    cerammi:nom "Cambodge"@fr ;
+    cerammi:location "POINT(104.990963 12.565679)"^^geo:wktLiteral .
+
+cerammi:KI a cerammi:Pays ;
+    cerammi:nom "Kiribati"@fr ;
+    cerammi:location "POINT(-168.734039 -3.370417)"^^geo:wktLiteral .
+
+cerammi:KM a cerammi:Pays ;
+    cerammi:nom "Comores"@fr ;
+    cerammi:location "POINT(43.872219 -11.875001)"^^geo:wktLiteral .
+
+cerammi:KN a cerammi:Pays ;
+    cerammi:nom "Saint-Christophe-et-Niévès"@fr ;
+    cerammi:location "POINT(-62.782998 17.357822)"^^geo:wktLiteral .
+
+cerammi:KP a cerammi:Pays ;
+    cerammi:nom "Corée du Nord"@fr ;
+    cerammi:location "POINT(127.510093 40.339852)"^^geo:wktLiteral .
+
+cerammi:KR a cerammi:Pays ;
+    cerammi:nom "Corée du Sud"@fr ;
+    cerammi:location "POINT(127.766922 35.907757)"^^geo:wktLiteral .
+
+cerammi:KW a cerammi:Pays ;
+    cerammi:nom "Koweït"@fr ;
+    cerammi:location "POINT(47.481766 29.31166)"^^geo:wktLiteral .
+
+cerammi:KY a cerammi:Pays ;
+    cerammi:nom "Îles Caïmans"@fr ;
+    cerammi:location "POINT(-80.566956 19.513469)"^^geo:wktLiteral .
+
+cerammi:KZ a cerammi:Pays ;
+    cerammi:nom "Kazakhstan"@fr ;
+    cerammi:location "POINT(66.923684 48.019573)"^^geo:wktLiteral .
+
+cerammi:LA a cerammi:Pays ;
+    cerammi:nom "Laos"@fr ;
+    cerammi:location "POINT(102.495496 19.85627)"^^geo:wktLiteral .
+
+cerammi:LB a cerammi:Pays ;
+    cerammi:nom "Liban"@fr ;
+    cerammi:location "POINT(35.862285 33.854721)"^^geo:wktLiteral .
+
+cerammi:LC a cerammi:Pays ;
+    cerammi:nom "Sainte-Lucie"@fr ;
+    cerammi:location "POINT(-60.978893 13.909444)"^^geo:wktLiteral .
+
+cerammi:LI a cerammi:Pays ;
+    cerammi:nom "Liechtenstein"@fr ;
+    cerammi:location "POINT(9.555373 47.166)"^^geo:wktLiteral .
+
+cerammi:LK a cerammi:Pays ;
+    cerammi:nom "Sri Lanka"@fr ;
+    cerammi:location "POINT(80.771797 7.873054)"^^geo:wktLiteral .
+
+cerammi:LR a cerammi:Pays ;
+    cerammi:nom "Libéria"@fr ;
+    cerammi:location "POINT(-9.429499 6.428055)"^^geo:wktLiteral .
+
+cerammi:LS a cerammi:Pays ;
+    cerammi:nom "Lesotho"@fr ;
+    cerammi:location "POINT(28.233608 -29.609988)"^^geo:wktLiteral .
+
+cerammi:LT a cerammi:Pays ;
+    cerammi:nom "Lituanie"@fr ;
+    cerammi:location "POINT(23.881275 55.169438)"^^geo:wktLiteral .
+
+cerammi:LU a cerammi:Pays ;
+    cerammi:nom "Luxembourg"@fr ;
+    cerammi:location "POINT(6.129583 49.815273)"^^geo:wktLiteral .
+
+cerammi:LV a cerammi:Pays ;
+    cerammi:nom "Lettonie"@fr ;
+    cerammi:location "POINT(24.603189 56.879635)"^^geo:wktLiteral .
+
+cerammi:LY a cerammi:Pays ;
+    cerammi:nom "Libye"@fr ;
+    cerammi:location "POINT(17.228331 26.3351)"^^geo:wktLiteral .
+
+cerammi:MA a cerammi:Pays ;
+    cerammi:nom "Maroc"@fr ;
+    cerammi:location "POINT(-7.09262 31.791702)"^^geo:wktLiteral .
+
+cerammi:MC a cerammi:Pays ;
+    cerammi:nom "Monaco"@fr ;
+    cerammi:location "POINT(7.412841 43.750298)"^^geo:wktLiteral .
+
+cerammi:MD a cerammi:Pays ;
+    cerammi:nom "Moldavie"@fr ;
+    cerammi:location "POINT(28.369885 47.411631)"^^geo:wktLiteral .
+
+cerammi:ME a cerammi:Pays ;
+    cerammi:nom "Monténégro"@fr ;
+    cerammi:location "POINT(19.37439 42.708678)"^^geo:wktLiteral .
+
+cerammi:MG a cerammi:Pays ;
+    cerammi:nom "Madagascar"@fr ;
+    cerammi:location "POINT(46.869107 -18.766947)"^^geo:wktLiteral .
+
+cerammi:MH a cerammi:Pays ;
+    cerammi:nom "Îles Marshall"@fr ;
+    cerammi:location "POINT(171.184478 7.131474)"^^geo:wktLiteral .
+
+cerammi:MK a cerammi:Pays ;
+    cerammi:nom "Macédoine du Nord"@fr ;
+    cerammi:location "POINT(21.745275 41.608635)"^^geo:wktLiteral .
+
+cerammi:ML a cerammi:Pays ;
+    cerammi:nom "Mali"@fr ;
+    cerammi:location "POINT(-3.996166 17.570692)"^^geo:wktLiteral .
+
+cerammi:MM a cerammi:Pays ;
+    cerammi:nom "Myanmar (Birmanie)"@fr ;
+    cerammi:location "POINT(95.956223 21.913965)"^^geo:wktLiteral .
+
+cerammi:MN a cerammi:Pays ;
+    cerammi:nom "Mongolie"@fr ;
+    cerammi:location "POINT(103.846656 46.862496)"^^geo:wktLiteral .
+
+cerammi:MO a cerammi:Pays ;
+    cerammi:nom "Macao"@fr ;
+    cerammi:location "POINT(113.543873 22.198745)"^^geo:wktLiteral .
+
+cerammi:MP a cerammi:Pays ;
+    cerammi:nom "Mariannes du Nord (Îles)"@fr ;
+    cerammi:location "POINT(145.38469 17.33083)"^^geo:wktLiteral .
+
+cerammi:MQ a cerammi:Pays ;
+    cerammi:nom "Martinique"@fr ;
+    cerammi:location "POINT(-61.024174 14.641528)"^^geo:wktLiteral .
+
+cerammi:MR a cerammi:Pays ;
+    cerammi:nom "Mauritanie"@fr ;
+    cerammi:location "POINT(-10.940835 21.00789)"^^geo:wktLiteral .
+
+cerammi:MS a cerammi:Pays ;
+    cerammi:nom "Montserrat"@fr ;
+    cerammi:location "POINT(-62.187366 16.742498)"^^geo:wktLiteral .
+
+cerammi:MT a cerammi:Pays ;
+    cerammi:nom "Malte"@fr ;
+    cerammi:location "POINT(14.375416 35.937496)"^^geo:wktLiteral .
+
+cerammi:MU a cerammi:Pays ;
+    cerammi:nom "Maurice (Île)"@fr ;
+    cerammi:location "POINT(57.552152 -20.348404)"^^geo:wktLiteral .
+
+cerammi:MV a cerammi:Pays ;
+    cerammi:nom "Maldives"@fr ;
+    cerammi:location "POINT(73.22068 3.202778)"^^geo:wktLiteral .
+
+cerammi:MW a cerammi:Pays ;
+    cerammi:nom "Malawi"@fr ;
+    cerammi:location "POINT(34.301525 -13.254308)"^^geo:wktLiteral .
+
+cerammi:MX a cerammi:Pays ;
+    cerammi:nom "Mexique"@fr ;
+    cerammi:location "POINT(-102.552784 23.634501)"^^geo:wktLiteral .
+
+cerammi:MY a cerammi:Pays ;
+    cerammi:nom "Malaisie"@fr ;
+    cerammi:location "POINT(101.975766 4.210484)"^^geo:wktLiteral .
+
+cerammi:MZ a cerammi:Pays ;
+    cerammi:nom "Mozambique"@fr ;
+    cerammi:location "POINT(35.529562 -18.665695)"^^geo:wktLiteral .
+
+cerammi:nan a cerammi:Pays ;
+    cerammi:nom "Namibie"@fr ;
+    cerammi:location "POINT(18.49041 -22.95764)"^^geo:wktLiteral .
+
+cerammi:NC a cerammi:Pays ;
+    cerammi:nom "Nouvelle-Calédonie"@fr ;
+    cerammi:location "POINT(165.618042 -20.904305)"^^geo:wktLiteral .
+
+cerammi:NE a cerammi:Pays ;
+    cerammi:nom "Niger"@fr ;
+    cerammi:location "POINT(8.081666 17.607789)"^^geo:wktLiteral .
+
+cerammi:NF a cerammi:Pays ;
+    cerammi:nom "Norfolk (Île)"@fr ;
+    cerammi:location "POINT(167.954712 -29.040835)"^^geo:wktLiteral .
+
+cerammi:NG a cerammi:Pays ;
+    cerammi:nom "Nigéria"@fr ;
+    cerammi:location "POINT(8.675277 9.081999)"^^geo:wktLiteral .
+
+cerammi:NI a cerammi:Pays ;
+    cerammi:nom "Nicaragua"@fr ;
+    cerammi:location "POINT(-85.207229 12.865416)"^^geo:wktLiteral .
+
+cerammi:NL a cerammi:Pays ;
+    cerammi:nom "Pays-Bas"@fr ;
+    cerammi:location "POINT(5.291266 52.132633)"^^geo:wktLiteral .
+
+cerammi:NO a cerammi:Pays ;
+    cerammi:nom "Norvège"@fr ;
+    cerammi:location "POINT(8.468946 60.472024)"^^geo:wktLiteral .
+
+cerammi:NP a cerammi:Pays ;
+    cerammi:nom "Népal"@fr ;
+    cerammi:location "POINT(84.124008 28.394857)"^^geo:wktLiteral .
+
+cerammi:NR a cerammi:Pays ;
+    cerammi:nom "Nauru"@fr ;
+    cerammi:location "POINT(166.931503 -0.522778)"^^geo:wktLiteral .
+
+cerammi:NU a cerammi:Pays ;
+    cerammi:nom "Niue"@fr ;
+    cerammi:location "POINT(-169.867233 -19.054445)"^^geo:wktLiteral .
+
+cerammi:NZ a cerammi:Pays ;
+    cerammi:nom "Nouvelle-Zélande"@fr ;
+    cerammi:location "POINT(174.885971 -40.900557)"^^geo:wktLiteral .
+
+cerammi:OM a cerammi:Pays ;
+    cerammi:nom "Oman"@fr ;
+    cerammi:location "POINT(55.923255 21.512583)"^^geo:wktLiteral .
+
+cerammi:PA a cerammi:Pays ;
+    cerammi:nom "Panama"@fr ;
+    cerammi:location "POINT(-80.782127 8.537981)"^^geo:wktLiteral .
+
+cerammi:PE a cerammi:Pays ;
+    cerammi:nom "Pérou"@fr ;
+    cerammi:location "POINT(-75.015152 -9.189967)"^^geo:wktLiteral .
+
+cerammi:PF a cerammi:Pays ;
+    cerammi:nom "Polynésie française"@fr ;
+    cerammi:location "POINT(-149.406843 -17.679742)"^^geo:wktLiteral .
+
+cerammi:PG a cerammi:Pays ;
+    cerammi:nom "Papouasie-Nouvelle-Guinée"@fr ;
+    cerammi:location "POINT(143.95555 -6.314993)"^^geo:wktLiteral .
+
+cerammi:PH a cerammi:Pays ;
+    cerammi:nom "Philippines"@fr ;
+    cerammi:location "POINT(121.774017 12.879721)"^^geo:wktLiteral .
+
+cerammi:PK a cerammi:Pays ;
+    cerammi:nom "Pakistan"@fr ;
+    cerammi:location "POINT(69.345116 30.375321)"^^geo:wktLiteral .
+
+cerammi:PL a cerammi:Pays ;
+    cerammi:nom "Pologne"@fr ;
+    cerammi:location "POINT(19.145136 51.919438)"^^geo:wktLiteral .
+
+cerammi:PM a cerammi:Pays ;
+    cerammi:nom "Saint-Pierre-et-Miquelon"@fr ;
+    cerammi:location "POINT(-56.27111 46.941936)"^^geo:wktLiteral .
+
+cerammi:PN a cerammi:Pays ;
+    cerammi:nom "Pitcairn (Îles)"@fr ;
+    cerammi:location "POINT(-127.439308 -24.703615)"^^geo:wktLiteral .
+
+cerammi:PR a cerammi:Pays ;
+    cerammi:nom "Porto Rico"@fr ;
+    cerammi:location "POINT(-66.590149 18.220833)"^^geo:wktLiteral .
+
+cerammi:PS a cerammi:Pays ;
+    cerammi:nom "Palestine"@fr ;
+    cerammi:location "POINT(35.233154 31.952162)"^^geo:wktLiteral .
+
+cerammi:PT a cerammi:Pays ;
+    cerammi:nom "Portugal"@fr ;
+    cerammi:location "POINT(-8.224454 39.399872)"^^geo:wktLiteral .
+
+cerammi:PW a cerammi:Pays ;
+    cerammi:nom "Palaos"@fr ;
+    cerammi:location "POINT(134.58252 7.51498)"^^geo:wktLiteral .
+
+cerammi:PY a cerammi:Pays ;
+    cerammi:nom "Paraguay"@fr ;
+    cerammi:location "POINT(-58.443832 -23.442503)"^^geo:wktLiteral .
+
+cerammi:QA a cerammi:Pays ;
+    cerammi:nom "Qatar"@fr ;
+    cerammi:location "POINT(51.183884 25.354826)"^^geo:wktLiteral .
+
+cerammi:RE a cerammi:Pays ;
+    cerammi:nom "Réunion"@fr ;
+    cerammi:location "POINT(55.536384 -21.115141)"^^geo:wktLiteral .
+
+cerammi:RO a cerammi:Pays ;
+    cerammi:nom "Roumanie"@fr ;
+    cerammi:location "POINT(24.96676 45.943161)"^^geo:wktLiteral .
+
+cerammi:RR a cerammi:Pays ;
+    cerammi:nom "République du Rif"@fr ;
+    cerammi:location "POINT(-7.09262 31.791702)"^^geo:wktLiteral .
+
+
+cerammi:RS a cerammi:Pays ;
+    cerammi:nom "Serbie"@fr ;
+    cerammi:location "POINT(21.005859 44.016521)"^^geo:wktLiteral .
+
+cerammi:RU a cerammi:Pays ;
+    cerammi:nom "Russie"@fr ;
+    cerammi:location "POINT(105.318756 61.52401)"^^geo:wktLiteral .
+
+cerammi:RW a cerammi:Pays ;
+    cerammi:nom "Rwanda"@fr ;
+    cerammi:location "POINT(29.873888 -1.940278)"^^geo:wktLiteral .
+
+cerammi:SA a cerammi:Pays ;
+    cerammi:nom "Arabie saoudite"@fr ;
+    cerammi:location "POINT(45.079162 23.885942)"^^geo:wktLiteral .
+
+cerammi:SB a cerammi:Pays ;
+    cerammi:nom "Salomon (Îles)"@fr ;
+    cerammi:location "POINT(160.156194 -9.64571)"^^geo:wktLiteral .
+
+cerammi:SC a cerammi:Pays ;
+    cerammi:nom "Seychelles"@fr ;
+    cerammi:location "POINT(55.491977 -4.679574)"^^geo:wktLiteral .
+
+cerammi:SD a cerammi:Pays ;
+    cerammi:nom "Soudan"@fr ;
+    cerammi:location "POINT(30.217636 12.862807)"^^geo:wktLiteral .
+
+cerammi:SE a cerammi:Pays ;
+    cerammi:nom "Suède"@fr ;
+    cerammi:location "POINT(18.643501 60.128161)"^^geo:wktLiteral .
+
+cerammi:SG a cerammi:Pays ;
+    cerammi:nom "Singapour"@fr ;
+    cerammi:location "POINT(103.819836 1.352083)"^^geo:wktLiteral .
+
+cerammi:SH a cerammi:Pays ;
+    cerammi:nom "Sainte-Hélène"@fr ;
+    cerammi:location "POINT(-10.030696 -24.143474)"^^geo:wktLiteral .
+
+cerammi:SI a cerammi:Pays ;
+    cerammi:nom "Slovénie"@fr ;
+    cerammi:location "POINT(14.995463 46.151241)"^^geo:wktLiteral .
+
+cerammi:SJ a cerammi:Pays ;
+    cerammi:nom "Svalbard et Jan Mayen"@fr ;
+    cerammi:location "POINT(23.670272 77.553604)"^^geo:wktLiteral .
+
+cerammi:SK a cerammi:Pays ;
+    cerammi:nom "Slovaquie"@fr ;
+    cerammi:location "POINT(19.699024 48.669026)"^^geo:wktLiteral .
+
+cerammi:SP a cerammi:Pays ;
+    cerammi:nom "Sierra Leone"@fr ;
+    cerammi:location "POINT(-11.779889 8.460555)"^^geo:wktLiteral .
+
+cerammi:SM a cerammi:Pays ;
+    cerammi:nom "Saint-Marin"@fr ;
+    cerammi:location "POINT(12.457777 43.94236)"^^geo:wktLiteral .
+
+cerammi:SN a cerammi:Pays ;
+    cerammi:nom "Sénégal"@fr ;
+    cerammi:location "POINT(-14.452362 14.497401)"^^geo:wktLiteral .
+
+cerammi:SO a cerammi:Pays ;
+    cerammi:nom "Somalie"@fr ;
+    cerammi:location "POINT(46.199616 5.152149)"^^geo:wktLiteral .
+
+cerammi:SR a cerammi:Pays ;
+    cerammi:nom "Suriname"@fr ;
+    cerammi:location "POINT(-56.027783 3.919305)"^^geo:wktLiteral .
+
+cerammi:ST a cerammi:Pays ;
+    cerammi:nom "São Tomé et Príncipe"@fr ;
+    cerammi:location "POINT(6.613081 0.18636)"^^geo:wktLiteral .
+
+cerammi:SV a cerammi:Pays ;
+    cerammi:nom "Salvador"@fr ;
+    cerammi:location "POINT(-88.89653 13.794185)"^^geo:wktLiteral .
+
+cerammi:SY a cerammi:Pays ;
+    cerammi:nom "Syrie"@fr ;
+    cerammi:location "POINT(38.996815 34.802075)"^^geo:wktLiteral .
+
+cerammi:SZ a cerammi:Pays ;
+    cerammi:nom "Swaziland"@fr ;
+    cerammi:location "POINT(31.465866 -26.522503)"^^geo:wktLiteral .
+
+cerammi:TC a cerammi:Pays ;
+    cerammi:nom "Îles Turques-et-Caïques"@fr ;
+    cerammi:location "POINT(-71.797928 21.694025)"^^geo:wktLiteral .
+
+cerammi:TD a cerammi:Pays ;
+    cerammi:nom "Tchad"@fr ;
+    cerammi:location "POINT(18.732207 15.454166)"^^geo:wktLiteral .
+
+cerammi:TF a cerammi:Pays ;
+    cerammi:nom "Terres australes et antarctiques françaises"@fr ;
+    cerammi:location "POINT(69.348557 -49.280366)"^^geo:wktLiteral .
+
+cerammi:TG a cerammi:Pays ;
+    cerammi:nom "Togo"@fr ;
+    cerammi:location "POINT(0.824782 8.619543)"^^geo:wktLiteral .
+
+cerammi:TH a cerammi:Pays ;
+    cerammi:nom "Thaïlande"@fr ;
+    cerammi:location "POINT(100.992541 15.870032)"^^geo:wktLiteral .
+
+cerammi:TJ a cerammi:Pays ;
+    cerammi:nom "Tadjikistan"@fr ;
+    cerammi:location "POINT(71.276093 38.861034)"^^geo:wktLiteral .
+
+cerammi:TK a cerammi:Pays ;
+    cerammi:nom "Tokélaou"@fr ;
+    cerammi:location "POINT(-171.855881 -8.967363)"^^geo:wktLiteral .
+
+
+cerammi:TM a cerammi:Pays ;
+    cerammi:nom "Turkménistan"@fr ;
+    cerammi:location "POINT(59.556278 38.969719)"^^geo:wktLiteral .
+
+cerammi:TN a cerammi:Pays ;
+    cerammi:nom "Tunisie"@fr ;
+    cerammi:location "POINT(9.537499 33.886917)"^^geo:wktLiteral .
+
+cerammi:TO a cerammi:Pays ;
+    cerammi:nom "Tonga"@fr ;
+    cerammi:location "POINT(-175.198242 -21.178986)"^^geo:wktLiteral .
+
+cerammi:TR a cerammi:Pays ;
+    cerammi:nom "Turquie"@fr ;
+    cerammi:location "POINT(35.243322 38.963745)"^^geo:wktLiteral .
+
+cerammi:TT a cerammi:Pays ;
+    cerammi:nom "Trinité-et-Tobago"@fr ;
+    cerammi:location "POINT(-61.222503 10.691803)"^^geo:wktLiteral .
+
+cerammi:TV a cerammi:Pays ;
+    cerammi:nom "Tuvalu"@fr ;
+    cerammi:location "POINT(177.64933 -7.109535)"^^geo:wktLiteral .
+
+cerammi:TW a cerammi:Pays ;
+    cerammi:nom "Taïwan"@fr ;
+    cerammi:location "POINT(120.960515 23.69781)"^^geo:wktLiteral .
+
+cerammi:TZ a cerammi:Pays ;
+    cerammi:nom "Tanzanie"@fr ;
+    cerammi:location "POINT(34.888822 -6.369028)"^^geo:wktLiteral .
+
+cerammi:UA a cerammi:Pays ;
+    cerammi:nom "Ukraine"@fr ;
+    cerammi:location "POINT(31.16558 48.379433)"^^geo:wktLiteral .
+
+cerammi:UG a cerammi:Pays ;
+    cerammi:nom "Ouganda"@fr ;
+    cerammi:location "POINT(32.290275 1.373333)"^^geo:wktLiteral .
+
+cerammi:UM a cerammi:Pays ;
+    cerammi:nom "Îles mineures éloignées des États-Unis"@fr ;
+    cerammi:location "POINT(nan nan)"^^geo:wktLiteral .
+
+cerammi:US a cerammi:Pays ;
+    cerammi:nom "United States"@fr ;
+    cerammi:location "POINT(-95.712891 37.09024)"^^geo:wktLiteral .
+
+cerammi:UY a cerammi:Pays ;
+    cerammi:nom "Uruguay"@fr ;
+    cerammi:location "POINT(-55.765835 -32.522779)"^^geo:wktLiteral .
+
+cerammi:UZ a cerammi:Pays ;
+    cerammi:nom "Ouzbékistan"@fr ;
+    cerammi:location "POINT(64.585262 41.377491)"^^geo:wktLiteral .
+
+cerammi:VA a cerammi:Pays ;
+    cerammi:nom "État de la Cité du Vatican"@fr ;
+    cerammi:location "POINT(12.453389 41.902916)"^^geo:wktLiteral .
+
+cerammi:CV a cerammi:Pays ;
+    cerammi:nom "Saint-Vincent-et-les-Grenadines"@fr ;
+    cerammi:location "POINT(-61.287228 12.984305)"^^geo:wktLiteral .
+
+cerammi:VE a cerammi:Pays ;
+    cerammi:nom "Venezuela"@fr ;
+    cerammi:location "POINT(-66.58973 6.42375)"^^geo:wktLiteral .
+
+cerammi:VG a cerammi:Pays ;
+    cerammi:nom "Vierges britanniques (Îles)"@fr ;
+    cerammi:location "POINT(-64.639968 18.420695)"^^geo:wktLiteral .
+
+cerammi:VI a cerammi:Pays ;
+    cerammi:nom "Vierges américaines (Îles)"@fr ;
+    cerammi:location "POINT(-64.896335 18.335765)"^^geo:wktLiteral .
+
+cerammi:VN a cerammi:Pays ;
+    cerammi:nom "Viêt Nam"@fr ;
+    cerammi:location "POINT(108.277199 14.058324)"^^geo:wktLiteral .
+
+cerammi:VU a cerammi:Pays ;
+    cerammi:nom "Vanuatu"@fr ;
+    cerammi:location "POINT(166.959158 -15.376706)"^^geo:wktLiteral .
+
+cerammi:WF a cerammi:Pays ;
+    cerammi:nom "Wallis-et-Futuna"@fr ;
+    cerammi:location "POINT(-177.156097 -13.768752)"^^geo:wktLiteral .
+
+cerammi:WS a cerammi:Pays ;
+    cerammi:nom "Samoa"@fr ;
+    cerammi:location "POINT(-172.104629 -13.759029)"^^geo:wktLiteral .
+
+cerammi:XK a cerammi:Pays ;
+    cerammi:nom "Kosovo"@fr ;
+    cerammi:location "POINT(20.902977 42.602636)"^^geo:wktLiteral .
+
+cerammi:YE a cerammi:Pays ;
+    cerammi:nom "Yémen"@fr ;
+    cerammi:location "POINT(48.516388 15.552727)"^^geo:wktLiteral .
+
+cerammi:YT a cerammi:Pays ;
+    cerammi:nom "Mayotte"@fr ;
+    cerammi:location "POINT(45.166244 -12.8275)"^^geo:wktLiteral .
+
+cerammi:ZA a cerammi:Pays ;
+    cerammi:nom "Afrique du Sud"@fr ;
+    cerammi:location "POINT(22.937506 -30.559482)"^^geo:wktLiteral .
+
+cerammi:ZM a cerammi:Pays ;
+    cerammi:nom "Zambie"@fr ;
+    cerammi:location "POINT(27.849332 -13.133897)"^^geo:wktLiteral .
+
+cerammi:ZW a cerammi:Pays ;
+    cerammi:nom "Zimbabwe"@fr ;
+    cerammi:location "POINT(29.154857 -19.015438)"^^geo:wktLiteral .
+
+cerammi:CN cerammi:comprends cerammi:1 .
+
+cerammi:US cerammi:comprends cerammi:2 .
+
+cerammi:GR cerammi:comprends cerammi:3 .
+
+cerammi:TZ cerammi:comprends cerammi:4 .
+
+cerammi:AU cerammi:comprends cerammi:5 .
+
+cerammi:SN cerammi:comprends cerammi:6 .
+
+cerammi:FR cerammi:comprends cerammi:7 .
+
+cerammi:TN cerammi:comprends cerammi:8 .
+
+cerammi:US cerammi:comprends cerammi:9 .
+
+cerammi:FR cerammi:comprends cerammi:10 .
+
+cerammi:EG cerammi:comprends cerammi:11 .
+
+cerammi:IN cerammi:comprends cerammi:12 .
+
+cerammi:PE cerammi:comprends cerammi:13 .
+
+cerammi:KH cerammi:comprends cerammi:14 .
+
+cerammi:DE cerammi:comprends cerammi:15 .
+
+cerammi:FR cerammi:comprends cerammi:16 .
+
+cerammi:IN cerammi:comprends cerammi:17 .
+
+cerammi:IT cerammi:comprends cerammi:18 .
+
+cerammi:IL cerammi:comprends cerammi:19 .
+
+cerammi:GB cerammi:comprends cerammi:20 .
+
+cerammi:CL cerammi:comprends cerammi:21 .
+
+cerammi:MX cerammi:comprends cerammi:22 .
+
+cerammi:ES cerammi:comprends cerammi:23 .
+
+cerammi:JO cerammi:comprends cerammi:24 .
+
+cerammi:ET cerammi:comprends cerammi:25 .
+
+cerammi:US cerammi:comprends cerammi:26 .
+
+cerammi:FR cerammi:comprends cerammi:27 .
+
+cerammi:EG cerammi:comprends cerammi:28 .
+
+cerammi:IT cerammi:comprends cerammi:29 .
+
+cerammi:IL cerammi:comprends cerammi:30 .

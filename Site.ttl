@@ -1,0 +1,519 @@
+
+@prefix cerammi: <https://cours.iut-orsay.fr/npbd/projet/cerammi#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+geo:wktLiteral a rdfs:Datatype .
+
+cerammi:1 a cerammi:Site ;
+    cerammi:nom "Site des grottes de Mogao"@fr ;
+    cerammi:appartientAuPays cerammi:CN ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:2 a cerammi:Site ;
+    cerammi:nom "Parc national de Yellowstone"@fr ;
+    cerammi:appartientAuPays cerammi:US ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:3 a cerammi:Site ;
+    cerammi:nom "Acropole d'Athènes"@fr ;
+    cerammi:appartientAuPays cerammi:GR ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:4 a cerammi:Site ;
+    cerammi:nom "Parc national de Serengeti"@fr ;
+    cerammi:appartientAuPays cerammi:TZ ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:5 a cerammi:Site ;
+    cerammi:nom "Grande Barrière de corail"@fr ;
+    cerammi:appartientAuPays cerammi:AU ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:6 a cerammi:Site ;
+    cerammi:nom "Île de Gorée"@fr ;
+    cerammi:appartientAuPays cerammi:SN ;
+    cerammi:etat "Délabré"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:7 a cerammi:Site ;
+    cerammi:nom "Mont-Saint-Michel et sa baie"@fr ;
+    cerammi:appartientAuPays cerammi:FR ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:8 a cerammi:Site ;
+    cerammi:nom "Site archéologique de Carthage"@fr ;
+    cerammi:appartientAuPays cerammi:TN ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:9 a cerammi:Site ;
+    cerammi:nom "Statue de la Liberté"@fr ;
+    cerammi:appartientAuPays cerammi:US ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:10 a cerammi:Site ;
+    cerammi:nom "Palais de Versailles"@fr ;
+    cerammi:appartientAuPays cerammi:FR ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:11 a cerammi:Site ;
+    cerammi:nom "Pyramides de Gizeh"@fr ;
+    cerammi:appartientAuPays cerammi:EG ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:12 a cerammi:Site ;
+    cerammi:nom "Taj Mahal"@fr ;
+    cerammi:appartientAuPays cerammi:IN ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:13 a cerammi:Site ;
+    cerammi:nom "Machu Picchu"@fr ;
+    cerammi:appartientAuPays cerammi:PE ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:14 a cerammi:Site ;
+    cerammi:nom "Angkor Wat"@fr ;
+    cerammi:appartientAuPays cerammi:KH ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:15 a cerammi:Site ;
+    cerammi:nom "Château de Neuschwanstein"@fr ;
+    cerammi:appartientAuPays cerammi:DE ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:16 a cerammi:Site ;
+    cerammi:nom "Cathédrale Notre-Dame de Paris"@fr ;
+    cerammi:appartientAuPays cerammi:FR ;
+    cerammi:etat "Délabré"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:17 a cerammi:Site ;
+    cerammi:nom "Complexe de monuments de Hampi"@fr ;
+    cerammi:appartientAuPays cerammi:IN ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:18 a cerammi:Site ;
+    cerammi:nom "Centre historique de Florence"@fr ;
+    cerammi:appartientAuPays cerammi:IT ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:19 a cerammi:Site ;
+    cerammi:nom "Vieille ville de Jérusalem"@fr ;
+    cerammi:appartientAuPays cerammi:PS ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:20 a cerammi:Site ;
+    cerammi:nom "Stonehenge"@fr ;
+    cerammi:appartientAuPays cerammi:GB ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:20 a cerammi:Site ;
+    cerammi:nom "Stonehenge"@fr ;
+    cerammi:appartientAuPays cerammi:GB ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:21 a cerammi:Site ;
+    cerammi:nom "Île de Pâques"@fr ;
+    cerammi:appartientAuPays cerammi:CL ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:22 a cerammi:Site ;
+    cerammi:nom "Chichén Itzá"@fr ;
+    cerammi:appartientAuPays cerammi:MX ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:23 a cerammi:Site ;
+    cerammi:nom "Mosquée de Cordoue"@fr ;
+    cerammi:appartientAuPays cerammi:ES ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:24 a cerammi:Site ;
+    cerammi:nom "Complexe archéologique de Petra"@fr ;
+    cerammi:appartientAuPays cerammi:JO ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:25 a cerammi:Site ;
+    cerammi:nom "Églises de Lalibela"@fr ;
+    cerammi:appartientAuPays cerammi:ET ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:26 a cerammi:Site ;
+    cerammi:nom "Grand Canyon"@fr ;
+    cerammi:appartientAuPays cerammi:US ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:27 a cerammi:Site ;
+    cerammi:nom "Château de Chambord"@fr ;
+    cerammi:appartientAuPays cerammi:FR ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:28 a cerammi:Site ;
+    cerammi:nom "Vallée des Rois"@fr ;
+    cerammi:appartientAuPays cerammi:EG ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:29 a cerammi:Site ;
+    cerammi:nom "Colisée de Rome"@fr ;
+    cerammi:appartientAuPays cerammi:IT ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:30 a cerammi:Site ;
+    cerammi:nom "Forteresse de Masada"@fr ;
+    cerammi:appartientAuPays cerammi:PS ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:31 a cerammi:Site ;
+    cerammi:nom "Temple de Borobudur"@fr ;
+    cerammi:appartientAuPays cerammi:ID ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:32 a cerammi:Site ;
+    cerammi:nom "Cathédrale Saint-Basile"@fr ;
+    cerammi:appartientAuPays cerammi:RU ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:33 a cerammi:Site ;
+    cerammi:nom "Réserve naturelle de Doñana"@fr ;
+    cerammi:appartientAuPays cerammi:ES ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:34 a cerammi:Site ;
+    cerammi:nom "Château de Windsor"@fr ;
+    cerammi:appartientAuPays cerammi:GB ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:35 a cerammi:Site ;
+    cerammi:nom "Parc national de Kakadu"@fr ;
+    cerammi:appartientAuPays cerammi:AU ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:36 a cerammi:Site ;
+    cerammi:nom "Sanctuaire historique de Lumbini"@fr ;
+    cerammi:appartientAuPays cerammi:NP ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:37 a cerammi:Site ;
+    cerammi:nom "Îles Galápagos"@fr ;
+    cerammi:appartientAuPays cerammi:EC ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:38 a cerammi:Site ;
+    cerammi:nom "Complexe archéologique de Thèbes"@fr ;
+    cerammi:appartientAuPays cerammi:EG ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:39 a cerammi:Site ;
+    cerammi:nom "Mont Everest"@fr ;
+    cerammi:appartientAuPays cerammi:NP ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:40 a cerammi:Site ;
+    cerammi:nom "Île d'Amsterdam"@fr ;
+    cerammi:appartientAuPays cerammi:FR ;
+    cerammi:etat "Délabré"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:41 a cerammi:Site ;
+    cerammi:nom "Centre historique de Cracovie"@fr ;
+    cerammi:appartientAuPays cerammi:PL ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:42 a cerammi:Site ;
+    cerammi:nom "Delta de l'Okavango"@fr ;
+    cerammi:appartientAuPays cerammi:BW ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:43 a cerammi:Site ;
+    cerammi:nom "Temple de Louxor"@fr ;
+    cerammi:appartientAuPays cerammi:EG ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:44 a cerammi:Site ;
+    cerammi:nom "Île de Komodo"@fr ;
+    cerammi:appartientAuPays cerammi:ID ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:45 a cerammi:Site ;
+    cerammi:nom "Grottes de Škocjan"@fr ;
+    cerammi:appartientAuPays cerammi:SI ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:46 a cerammi:Site ;
+    cerammi:nom "Centre historique de Porto"@fr ;
+    cerammi:appartientAuPays cerammi:PT ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:47 a cerammi:Site ;
+    cerammi:nom "Mont Kilimandjaro"@fr ;
+    cerammi:appartientAuPays cerammi:TZ ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:48 a cerammi:Site ;
+    cerammi:nom "Château de Bran"@fr ;
+    cerammi:appartientAuPays cerammi:RO ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:49 a cerammi:Site ;
+    cerammi:nom "Vallée des papillons de Lushan"@fr ;
+    cerammi:appartientAuPays cerammi:CN ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:50 a cerammi:Site ;
+    cerammi:nom "Centre historique de Prague"@fr ;
+    cerammi:appartientAuPays cerammi:CZ ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:51 a cerammi:Site ;
+    cerammi:nom "Forêts tropicales d'Atsinanana"@fr ;
+    cerammi:appartientAuPays cerammi:MG ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:52 a cerammi:Site ;
+    cerammi:nom "Sanctuaire de faune de Manas"@fr ;
+    cerammi:appartientAuPays cerammi:IN ;
+    cerammi:etat "Délabré"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:53 a cerammi:Site ;
+    cerammi:nom "Centre historique de Bruges"@fr ;
+    cerammi:appartientAuPays cerammi:BE ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:54 a cerammi:Site ;
+    cerammi:nom "Vallée de Katmandou"@fr ;
+    cerammi:appartientAuPays cerammi:NP ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:55 a cerammi:Site ;
+    cerammi:nom "Chutes Victoria"@fr ;
+    cerammi:appartientAuPays cerammi:ZW ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:56 a cerammi:Site ;
+    cerammi:nom "Vieille ville de Dubrovnik"@fr ;
+    cerammi:appartientAuPays cerammi:HR ;
+    cerammi:etat "Délabré"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:57 a cerammi:Site ;
+    cerammi:nom "Récif de Ningaloo"@fr ;
+    cerammi:appartientAuPays cerammi:AU ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:58 a cerammi:Site ;
+    cerammi:nom "Cathédrale de Canterbury"@fr ;
+    cerammi:appartientAuPays cerammi:GB ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:59 a cerammi:Site ;
+    cerammi:nom "Forêt primaire d'Odzala"@fr ;
+    cerammi:appartientAuPays cerammi:CG ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:60 a cerammi:Site ;
+    cerammi:nom "Ville historique de Quito"@fr ;
+    cerammi:appartientAuPays cerammi:EC ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+cerammi:61 a cerammi:Site ;
+    cerammi:nom "Palais impérial de Pékin"@fr ;
+    cerammi:appartientAuPays cerammi:CN ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:62 a cerammi:Site ;
+    cerammi:nom "Sanctuaire de faune de Sundarbans"@fr ;
+    cerammi:appartientAuPays cerammi:BD ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:63 a cerammi:Site ;
+    cerammi:nom "Forteresse de Suomenlinna"@fr ;
+    cerammi:appartientAuPays cerammi:FI ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:64 a cerammi:Site ;
+    cerammi:nom "Mont Everest"@fr ;
+    cerammi:appartientAuPays cerammi:NP ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:65 a cerammi:Site ;
+    cerammi:nom "Vieille ville de Ségovie et son aqueduc"@fr ;
+    cerammi:appartientAuPays cerammi:ES ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:66 a cerammi:Site ;
+    cerammi:nom "Parc national de Komodo"@fr ;
+    cerammi:appartientAuPays cerammi:ID ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:67 a cerammi:Site ;
+    cerammi:nom "Cathédrale de Strasbourg"@fr ;
+    cerammi:appartientAuPays cerammi:FR ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:68 a cerammi:Site ;
+    cerammi:nom "Parc national des Virunga"@fr ;
+    cerammi:appartientAuPays cerammi:CD ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:69 a cerammi:Site ;
+    cerammi:nom "Vieille ville de Lijiang"@fr ;
+    cerammi:appartientAuPays cerammi:CN ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:70 a cerammi:Site ;
+    cerammi:nom "Parc national de Kakadu"@fr ;
+    cerammi:appartientAuPays cerammi:AU ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:71 a cerammi:Site ;
+    cerammi:nom "Centre historique de Lima"@fr ;
+    cerammi:appartientAuPays cerammi:PE ;
+    cerammi:etat "Délabré"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:72 a cerammi:Site ;
+    cerammi:nom "Parc national du Serengeti"@fr ;
+    cerammi:appartientAuPays cerammi:TZ ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:73 a cerammi:Site ;
+    cerammi:nom "Forêt de Białowieża"@fr ;
+    cerammi:appartientAuPays cerammi:PL ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:74 a cerammi:Site ;
+    cerammi:nom "Mont Fuji"@fr ;
+    cerammi:appartientAuPays cerammi:JP ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:75 a cerammi:Site ;
+    cerammi:nom "Théâtre antique d'Orange"@fr ;
+    cerammi:appartientAuPays cerammi:FR ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:76 a cerammi:Site ;
+    cerammi:nom "Château de Windsor"@fr ;
+    cerammi:appartientAuPays cerammi:GB ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:77 a cerammi:Site ;
+    cerammi:nom "Delta du Danube"@fr ;
+    cerammi:appartientAuPays cerammi:RO ;
+    cerammi:etat "En danger"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:78 a cerammi:Site ;
+    cerammi:nom "Vallée des temples d'Agrigente"@fr ;
+    cerammi:appartientAuPays cerammi:IT ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:79 a cerammi:Site ;
+    cerammi:nom "Parc national de Bwindi"@fr ;
+    cerammi:appartientAuPays cerammi:UG ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:80 a cerammi:Site ;
+    cerammi:nom "Centre historique de Tallinn"@fr ;
+    cerammi:appartientAuPays cerammi:EE ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Culturel"@fr .
+
+cerammi:81 a cerammi:Site ;
+    cerammi:nom "Baie du François"@fr ;
+    cerammi:appartientAuPays cerammi:FR ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+
+cerammi:83 a cerammi:Site ;
+    cerammi:nom "PLage CalaBonita"@fr ;
+    cerammi:appartientAuPays cerammi:RR ;
+    cerammi:etat "Bien conservé"@fr ;
+    cerammi:type "Naturel"@fr .
+
+cerammi:84 a cerammi:Site ;
+    cerammi:nom "Ruines de Timgad"@fr ;
+    cerammi:appartientAuPays cerammi:DZ ;
+    cerammi:etat "Délabré"@fr ;
+    cerammi:type "Naturel"@fr .
+
+
+
+
+
+
+

@@ -5,23 +5,16 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?NomSite ?NomPays ?EtatSite ?TypeSite ?IDH WHERE {
- ?Site a cerammi:Site;
-          cerammi:nom ?NomSite;
-          cerammi:etat ?EtatSite;
-    	  cerammi:appartientAuPays ?Pays;
-    	  cerammi:type ?TypeSite.
-    ?Pays a cerammi:Pays;
-          cerammi:nom ?NomPays.
-
+INSERT {
+    ?Pays cerammi:idh ?IDH .
+}
+WHERE {
+    ?Pays a cerammi:Pays ;
+          cerammi:nom ?NomPays .
 
     SERVICE <https://query.wikidata.org/sparql> {
-        ?WikidataPays rdfs:label ?NomPays.  
+        ?WikidataPays rdfs:label ?NomPays. 
         FILTER(LANG(?NomPays) = "fr")       
-        ?WikidataPays wdt:P1081 ?IDH.      
+        ?WikidataPays wdt:P1081 ?IDH.     
     }
-
 }
-ORDER BY ?IDH
-LIMIT 100
-
