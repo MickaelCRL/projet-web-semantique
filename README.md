@@ -1,2 +1,2 @@
 # projet-web-semantique
-Ce projet vise à analyser les pays ayant le plus grand nombre de sites UNESCO en tenant compte de leur population. L'objectif est d'identifier les pays où ce patrimoine mondial est le plus dense, en comparant les sites UNESCO par habitant.
+Ce projet vise à développer une application web avec Next.js pour visualiser les résultats d'analyses SPARQL. Il permet d'explorer les données des sites UNESCO en fonction de l'IDH du pays où ils sont, de leur état de conservation et de leur type (culturel ou naturel). Une interface intuitive offre des représentations graphiques interactives pour une meilleure compréhension des données.
